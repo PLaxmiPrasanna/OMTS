@@ -1,5 +1,6 @@
-<%@page import="com.cg.omts.service.UserServiceImpl"%>
-<%@page import="com.cg.omts.service.IUserService"%> 
+<%@page import="com.cg.omts.service.MovieTheatreServiceImpl"%>
+<%@page import="com.cg.omts.dao.MovieTheatreDaoImpl"%>
+<%@page import="com.cg.omts.service.IMovieTheatreService"%>
 <%@page import="com.cg.omts.dto.Movie"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -120,7 +121,9 @@ tr:hover {
 
   if(session.getAttribute("username")==null)
       response.sendRedirect("index.jsp");
-
+  else if(session.getAttribute("roleCode").equals("adm")){
+	  response.sendRedirect("adminHomePage.jsp");
+  }
   %> 
 
 <% if (session != null) {
@@ -154,9 +157,10 @@ tr:hover {
 	<table align="center" border=1>
 	<tr><th style="text-align:center">Movie</th><th style="text-align:center">Movie Details</th></tr>
 	  		<% 
-	  		IUserService userService = new UserServiceImpl();
-			List<Movie> moviesList = userService.getAllMovies();
-		for(Movie movie : moviesList) {
+	  		IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl();
+	  		
+			List<Movie> moviesList = movieTheatreService.getAllMovies();
+			for(Movie movie : moviesList) {
 			String movieName = movie.getMovieName();
 			int movId = movie.getMovieId();
 			%>

@@ -126,7 +126,7 @@ table {
 }
 
 th, td {
-	padding: 8px;
+	padding: 5px;
 	text-align: left;
 	border-bottom: 1px solid #ddd;
 }
@@ -146,7 +146,9 @@ tr:hover {
 
   if(session.getAttribute("username")==null)
       response.sendRedirect("index.jsp");
-
+  else if(session.getAttribute("roleCode").equals("adm")){
+	  response.sendRedirect("adminHomePage.jsp");
+  }
   %> 
  <div class="header">
 	 		
@@ -193,16 +195,16 @@ tr:hover {
 			
 		</tr>
 		<%	for(int i = 0; i < ticketList.size(); i++){
-		%> 		<tr>
-					<td><%=ticketList.get(i).getTicketId() %>
-					<td><%=ticketList.get(i).getNoOfSeats() %>
-					<td><%=theatreNameList.get(i) %> 
-					<td><%=movieNameList.get(i) %>
-					<td><%=showNameList.get(i) %>
-					<td><%=screenNameList.get(i)%>
-					<td><%=transactionList.get(i).getTotalAmount() %>
-					<td><%=bookingList.get(i).getBookingDate() %>
-					<td><a href="CancelBookingController?ticketId=<%=ticketList.get(i).getTicketId()%>">cancel</a>
+		%> 		<tr height="5px">
+					<td><%=ticketList.get(i).getTicketId() %></td>
+					<td><%=ticketList.get(i).getNoOfSeats() %></td>
+					<td><%=theatreNameList.get(i) %> </td>
+					<td><%=movieNameList.get(i) %></td>
+					<td><%=showNameList.get(i) %></td>
+					<td><%=screenNameList.get(i)%></td>
+					<td><%=transactionList.get(i).getTotalAmount() %></td>
+					<td><%=bookingList.get(i).getBookingDate() %></td>
+					<td><a href="CancelBookingController?ticketId=<%=ticketList.get(i).getTicketId()%>">cancel</a></td>
 				</tr>	
 			<%
 			}%>

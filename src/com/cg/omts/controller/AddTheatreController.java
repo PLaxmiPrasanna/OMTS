@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cg.omts.dto.Theatre;
 import com.cg.omts.exceptions.OMTSException;
-import com.cg.omts.service.AdminServiceImpl;
-import com.cg.omts.service.IAdminService;
+import com.cg.omts.service.IMovieTheatreService;
+import com.cg.omts.service.MovieTheatreServiceImpl;
 
 /**
  * Servlet implementation class AddTheatreServlet
@@ -40,9 +40,10 @@ public class AddTheatreController extends HttpServlet {
 		theatre.setTheatreCity(theatreCity);
 		theatre.setManagerName(managerName);
 		theatre.setManagerContact(managerContact);
-		IAdminService adminService = new AdminServiceImpl();
+		//IAdminService adminService = new AdminServiceImpl();
+		IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl();
 		try {
-			rowsInserted = adminService.addTheatre(theatre);
+			rowsInserted = movieTheatreService.addTheatre(theatre);
 		} catch (OMTSException e) {
 			e.printStackTrace();
 		}

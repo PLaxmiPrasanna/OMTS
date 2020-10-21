@@ -1,6 +1,7 @@
 package com.cg.omts.controller;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cg.omts.dto.Screen;
 import com.cg.omts.exceptions.OMTSException;
-import com.cg.omts.service.IUserService;
-import com.cg.omts.service.UserServiceImpl;
+import com.cg.omts.service.BookingServiceImpl;
+import com.cg.omts.service.IBookingService;
 
 @WebServlet("/BookingController")
 public class BookingController extends HttpServlet{
@@ -23,7 +24,7 @@ public class BookingController extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RequestDispatcher dispatcher = null;
-		IUserService userService = new UserServiceImpl();
+		IBookingService bookingService = new BookingServiceImpl();
 		List<Screen> screenList = null;
 		try {
 			int theatreId = Integer.parseInt(request.getParameter("theatreId"));
@@ -31,7 +32,7 @@ public class BookingController extends HttpServlet{
 			int movieId = Integer.parseInt(request.getParameter("movieId"));
 			if(theatreId != -1) {
 				screenList = new ArrayList<Screen>();
-				screenList = userService.getScreenByTheatreId(theatreId);
+				screenList = bookingService.getScreenByTheatreId(theatreId);
 			}
 			request.setAttribute("theatreId", theatreId);
 			request.setAttribute("screenList", screenList);

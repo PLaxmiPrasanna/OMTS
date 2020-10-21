@@ -8,7 +8,7 @@ import com.cg.omts.dto.Show;
 import com.cg.omts.exceptions.OMTSException;
 
 public interface IScreenShowDao {
-	
+		
 	public List<Show> getShowDetails() throws OMTSException;//show screen
 	
 	public int addShow(Show show) throws OMTSException;//show

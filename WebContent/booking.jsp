@@ -277,6 +277,18 @@ body {
 </script>
 </head>
 <body class="bgpic">
+<%
+  response.setHeader("Cache-Control","no-cache");
+  response.setHeader("Cache-Control","no-store");
+  response.setHeader("Pragma","no-cache");
+  response.setDateHeader ("Expires", 0);
+
+  if(session.getAttribute("username")==null)
+      response.sendRedirect("index.jsp");
+  else if(session.getAttribute("roleCode").equals("adm")){
+	  response.sendRedirect("adminHomePage.jsp");
+  }
+  %> 
 <div class="header">
 	 		
 	 		<a href="LogoutServlet" class = "logout" align="right"><b>Logout</b></a>

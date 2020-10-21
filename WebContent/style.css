@@ -2,12 +2,13 @@
 
 body{
 	background-image: url("bg.jpg");
-	margin-top:150px !important;
+	margin-top:100px !important;
 }
 .register-left{
 	text-align: center;
 	color: #fff;
 	padding: 30px;
+	text-color:blue;
 }
 
 .register-left img
@@ -19,6 +20,7 @@ body{
 }
 .register-left p{
 	padding: 20px 20px 0;
+	color:blue;
 
 }
 
@@ -48,7 +50,7 @@ body{
 	padding: 50px;  
 }
 
-.register-right h2{
+.register-right h2,h3{
 	text-align: center;
 	margin-bottom: 10px;
 	color: #555;

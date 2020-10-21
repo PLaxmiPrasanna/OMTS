@@ -1,6 +1,7 @@
 package com.cg.omts.controller;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.util.List;
@@ -16,9 +17,8 @@ import javax.servlet.http.HttpSession;
 import com.cg.omts.dto.Booking;
 import com.cg.omts.dto.Transaction;
 import com.cg.omts.exceptions.OMTSException;
-import com.cg.omts.service.IAdminService;
-import com.cg.omts.service.IUserService;
-import com.cg.omts.service.UserServiceImpl;
+import com.cg.omts.service.BookingServiceImpl;
+import com.cg.omts.service.IBookingService;
 
 @WebServlet("/paymentController")
 public class PaymentController extends HttpServlet{
@@ -27,6 +27,7 @@ public class PaymentController extends HttpServlet{
 		// TODO Auto-generated method stub.
 		PrintWriter out = resp.getWriter();
 		RequestDispatcher dispatcher = null;
+		IBookingService bookingService = new BookingServiceImpl();
 		int accountNo=Integer.parseInt(req.getParameter("acc"));
 		int cvv =Integer.parseInt(req.getParameter("cvv"));
 		String password=req.getParameter("pass");
@@ -36,62 +37,45 @@ public class PaymentController extends HttpServlet{
 		int showId = Integer.parseInt(req.getParameter("showId"));
 		int movieId = Integer.parseInt(req.getParameter("movieId"));
 		int totalCost = Integer.parseInt(req.getParameter("totalPrice"));
-		IUserService user = new UserServiceImpl();
+		
 		int currentBalance = 0;
 		String movieName = "", theatreName = "", screenName = "", showName = "";
 		try {
 			
-			Boolean flag= user.validatePayment(accountNo, cvv, password);
+			Boolean flag= bookingService.validatePayment(accountNo, cvv, password);
 			if(flag==true) {
 				//int ticketId = 1;
-				int userId = 1;
+				
 				//int totalCost = 1000; 
-				int transactionId = GenerateTransactionID.getTransactionId();
-				int bookingId = GenerateTicketID.getBookingId();
+				int transactionId = GenerateIds.getTransactionId();
+				int bookingId = GenerateIds.getBookingId();
 				System.out.println("Transaction Id generated id: "+transactionId);
 				Transaction transaction = new Transaction(transactionId, accountNo, totalCost);
 				System.out.println("Transaction obj in paymentprocess: " + transaction);
-				currentBalance = user.getCurrentBalance(transaction);
-				int isTransact= user.addTransaction(transaction, ticketId);
-				int isdeducted = user.makePayment(accountNo, currentBalance, totalCost);
+				currentBalance = bookingService.getCurrentBalance(transaction);
+				int isTransact= bookingService.addTransaction(transaction, ticketId);
+				int isdeducted = bookingService.makePayment(accountNo, currentBalance, totalCost);
 				
 				System.out.println("is Transaction done: "+ isTransact);
-				//add transaction (get tran id) -- completed
-				//Booking id=customerid+theatreid+movieid+showid;
-				//int theatreId =1, movieId = 1, showId = 1; 
-				
-				/*
-				 * DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss"); Date dateobj = new
-				 * Date(); System.out.println(df.format(dateobj));
-				 */
-				
-				
-				
 				Date todayDate = new Date(System.currentTimeMillis());
 				System.out.println("Today's date : "+ todayDate);
-				//call addbooking
 				
 				Booking booking = new Booking(bookingId, todayDate);
-				int isBooked = user.addBooking(booking, ticketId, transactionId);
+				int isBooked = bookingService.addBooking(booking, ticketId, transactionId);
 				
-				//setSeatstatus to booked.
-				
-				//setTicketstatus to booked.
 				if(isBooked > 0) {
-					user.setTicketStatus(ticketId, "BOOKED");
-				//user.setSeatStatus(seatId, "BOOKED");
-				
-					List<Integer> seatList =  user.getSeatsByTicket(ticketId);
+					bookingService.setTicketStatus(ticketId, "BOOKED");			
+					List<Integer> seatList =  bookingService.getSeatsByTicket(ticketId);
 					int seatListLength = seatList.size();
 					
 					for(Integer seatId: seatList) {
-						user.setSeatStatus(seatId, "BOOKED");
+						bookingService.setSeatStatus(seatId, "BOOKED");
 		
 					}
-					movieName = user.getMovieDetails(movieId).getMovieName();
-					theatreName = user.getTheatreName(theatreId);
-					screenName = user.getScreenName(screenId);
-					showName = user.getShowName(showId);
+					movieName = bookingService.getMovieDetails(movieId).getMovieName();
+					theatreName = bookingService.getTheatreName(theatreId);
+					screenName = bookingService.getScreenName(screenId);
+					showName = bookingService.getShowName(showId);
 					req.setAttribute("ticketId", ticketId);
 					req.setAttribute("booking", booking);
 					req.setAttribute("transaction", transaction);
@@ -103,12 +87,8 @@ public class PaymentController extends HttpServlet{
 					dispatcher = req.getRequestDispatcher("bookingConfirmation.jsp");
 					
 					dispatcher.forward(req, resp);
-//					HttpSession session = req.getSession();
-//					session.setAttribute("booking", booking);
-//					session.setAttribute("transaction", transaction);
-//					resp.sendRedirect("bookingConfirmation.jsp");
 				}
-			}else
+			}else {
 				//out.println("Invalid Credentials");
 				req.setAttribute("message", "Invalid Credentials");
 				req.setAttribute("totalPrice", totalCost);
@@ -120,7 +100,7 @@ public class PaymentController extends HttpServlet{
 				req.setAttribute("showName", showName);
 				dispatcher = req.getRequestDispatcher("payment.jsp");
 				dispatcher.forward(req, resp);
-			
+			}
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

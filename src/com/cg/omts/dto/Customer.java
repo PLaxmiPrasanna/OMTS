@@ -10,7 +10,7 @@ public class Customer {
 		private String customerPassword;
 		private Date dateOfBirth;
 		private List<Ticket> myTickets;
-		private int customerContact;
+		private String customerContact;
 		private String roleCode;
 		public Customer() {
 			super();
@@ -18,7 +18,7 @@ public class Customer {
 		}
 		
 		public Customer(int customerId, String customerName, String customerPassword, Date dateOfBirth,
-				int customerContact, String roleCode) {
+				String customerContact, String roleCode) {
 			super();
 			this.customerId = customerId;
 			this.customerName = customerName;
@@ -29,7 +29,7 @@ public class Customer {
 		}
 
 		public Customer(int customerId, String customerName, String customerPassword, Date dateOfBirth,
-				List<Ticket> myTickets, int customerContact, String roleCode) {
+				List<Ticket> myTickets, String customerContact, String roleCode) {
 			super();
 			this.customerId = customerId;
 			this.customerName = customerName;
@@ -76,10 +76,10 @@ public class Customer {
 		public void setMyTickets(List<Ticket> myTickets) {
 			this.myTickets = myTickets;
 		}
-		public int getCustomerContact() {
+		public String getCustomerContact() {
 			return customerContact;
 		}
-		public void setCustomerContact(int customerContact) {
+		public void setCustomerContact(String customerContact) {
 			this.customerContact = customerContact;
 		}
 		public String getRoleCode() {
@@ -88,6 +88,7 @@ public class Customer {
 		public void setRoleCode(String roleCode) {
 			this.roleCode = roleCode;
 		}
+
 		@Override
 		public String toString() {
 			return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerPassword="

@@ -9,15 +9,17 @@
 <link rel ="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
+<%if(request.getAttribute("errorMessage") != null){ %>
+	<center><h3 style="color:red;"><%=request.getAttribute("errorMessage")%></h3></center>
+<%} %>
 <div class="container">
 	<div class="row">
 		<div class="col-md-10 offset=md-1">
 			<div class="row">
 				<div class="col-md-5 register-left">
 					<img src="icon.png">
-					<h3>JOIN US</h3>
-					<p>Be a part of T-CKT family to know more</p>
+					<h3 style="color:blue;">JOIN US</h3>
+					<p style="color:blue;">Be a part of T-CKT family to know more</p>
 					<button type="button" class="btn btn-primary">About Us</button>
 				</div>
 
@@ -27,7 +29,7 @@
 					<div class="register-form">
 					
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="UserName" pattern="^[a-zA-Z][0-9]{10}$" title = "User Name can be alphabet and numbers only with length 10" name="name" required>
+							<input type="text" class="form-control" placeholder="UserName" pattern="^[a-zA-Z0-9]{3,}$" title = "User Name can be alphabet and numbers only with minimum length 3" name="name" required>
 							
 						</div>
 						<div class="form-group">
@@ -35,7 +37,7 @@
 							
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-control" placeholder="password" name="pass" pattern = "^[a-zA-Z][0-9]{10}$" title = "User Name can be alphabet and numbers only with length 10"required>
+							<input type="password" class="form-control" placeholder="password" name="pass" required>
 							
 						</div>
 						<div class="form-group">

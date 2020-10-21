@@ -1,3 +1,5 @@
+<%@page import="com.cg.omts.service.BookingServiceImpl"%>
+<%@page import="com.cg.omts.service.IBookingService"%>
 <%@page import="com.cg.omts.dto.Transaction"%>
 <%@page import="com.cg.omts.dto.Booking"%>
 <%@page import="com.cg.omts.dto.Ticket"%>
@@ -117,6 +119,18 @@ a {
 
 </style>
 <body class="bgpic">
+<%
+  response.setHeader("Cache-Control","no-cache");
+  response.setHeader("Cache-Control","no-store");
+  response.setHeader("Pragma","no-cache");
+  response.setDateHeader ("Expires", 0);
+
+  if(session.getAttribute("username")==null)
+      response.sendRedirect("index.jsp");
+  else if(session.getAttribute("roleCode").equals("adm")){
+	  response.sendRedirect("adminHomePage.jsp");
+  }
+  %> 
  <div class="header">
 	 		
 	 		<a href="LogoutServlet" class = "logout" align="right"><b>Logout</b></a>
@@ -136,8 +150,8 @@ a {
 
  <%
 int ticketId=(Integer)request.getAttribute("ticketId");
-IUserDao user = new UserDaoImpl();
-Ticket ticket = user.getTicket(ticketId);
+IBookingService bookingService = new BookingServiceImpl();
+Ticket ticket = bookingService.getTicket(ticketId);
 %>
 <center>
 <table>

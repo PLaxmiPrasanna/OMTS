@@ -1,6 +1,7 @@
 package com.cg.omts.controller;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
@@ -13,8 +14,8 @@ import javax.servlet.http.HttpSession;
 
 import com.cg.omts.dto.Customer;
 import com.cg.omts.exceptions.OMTSException;
-import com.cg.omts.service.AdminServiceImpl;
-import com.cg.omts.service.IAdminService;
+import com.cg.omts.service.ICustomerService;
+import com.cg.omts.service.CustomerServiceImpl;
 
 
 @WebServlet("/LoginServlet")
@@ -25,24 +26,25 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		int userId=Integer.parseInt(request.getParameter("user"));
 		String password=request.getParameter("pass");
-		IAdminService admin = new AdminServiceImpl();
+		ICustomerService loginRegisterService = new CustomerServiceImpl();
 		Customer customer = new Customer(userId, password);
 		RequestDispatcher dispatcher =null;
 		try {
-			if(admin.validateLogin(customer).equals("adm"))
+			String roleCode = loginRegisterService.validateLogin(customer);
+			if(roleCode.equals("adm"))
 			{
 				HttpSession session = request.getSession(true);
 				session.setAttribute("username", customer.getCustomerId());
-				session.setAttribute("rolecode", "adm");
+				session.setAttribute("roleCode", "adm");
 				System.out.println("Admin");
 				response.sendRedirect("adminHomePage.jsp");
 			
 			}
-			else if(admin.validateLogin(customer).equals("usr"))
+			else if(roleCode.equals("usr"))
 			{
 				HttpSession session = request.getSession(true);
 				session.setAttribute("username", customer.getCustomerId());
-				session.setAttribute("rolecode", "usr");
+				session.setAttribute("roleCode", "usr");
 				dispatcher= request.getRequestDispatcher("userhome.jsp");
 				dispatcher.forward(request, response);
 				System.out.println("User");

@@ -9,11 +9,7 @@ import com.cg.omts.exceptions.OMTSException;
 
 public interface IMovieTheatreDao {
 
-	public int getMovieLength(int movieId) throws OMTSException;
-	
-	public String getMovieNameById(int movieId) throws OMTSException;
-	
-	public boolean addMovie(Movie movie) throws OMTSException;
+public boolean addMovie(Movie movie) throws OMTSException;
 	
 	public ArrayList<Movie> getMovieIdName() throws OMTSException;
 	
@@ -48,6 +44,10 @@ public interface IMovieTheatreDao {
 	public int deleteTheatre(int theatreId) throws OMTSException;
 	
 	public List<Theatre> getTheatreByName(String theatreName) throws OMTSException;
+	
+	public int getMovieLength(int movieId) throws OMTSException;
+	
+	public String getMovieNameById(int movieId) throws OMTSException;
 	
 	public boolean addMovieToTheatre(int movieId, int theatreId) throws OMTSException;
 	

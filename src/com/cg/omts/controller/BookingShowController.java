@@ -1,6 +1,7 @@
 package com.cg.omts.controller;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +16,8 @@ import com.cg.omts.dto.Screen;
 import com.cg.omts.dto.Seat;
 import com.cg.omts.dto.Show;
 import com.cg.omts.exceptions.OMTSException;
-import com.cg.omts.service.IUserService;
-import com.cg.omts.service.UserServiceImpl;
+import com.cg.omts.service.BookingServiceImpl;
+import com.cg.omts.service.IBookingService;
 
 @WebServlet("/BookingShowController")
 public class BookingShowController extends HttpServlet{
@@ -25,7 +26,7 @@ public class BookingShowController extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RequestDispatcher dispatcher = null;
-		IUserService userService = new UserServiceImpl();
+		IBookingService bookingService = new BookingServiceImpl();
 		Seat seat = null;
 		try {
 			int theatreId = Integer.parseInt(request.getParameter("theatreId"));
@@ -33,15 +34,15 @@ public class BookingShowController extends HttpServlet{
 			int movieId = Integer.parseInt(request.getParameter("movieId"));
 			int screenId = Integer.parseInt(request.getParameter("screenId"));
 			int showId = Integer.parseInt(request.getParameter("showId"));
-			String showName = userService.getShowName(showId);
+			String showName = bookingService.getShowName(showId);
 			if(theatreId != -1 && screenId != -1) {
-				seat = userService.getSeatPrice(screenId);
+				seat = bookingService.getSeatPrice(screenId);
 				
 			}
 			double totalPrice = noOfSeats * seat.getSeatPrice();
-			String screenName = userService.getScreenName(screenId);
-			int seatsAvailable = userService.getSeatsAvailable(screenId);
-			Screen screen = userService.getScreen(screenId);
+			String screenName = bookingService.getScreenName(screenId);
+			int seatsAvailable = bookingService.getSeatsAvailable(screenId);
+			Screen screen = bookingService.getScreen(screenId);
 			int totalSeatsAvailable = (screen.getRows()*screen.getColumns())-seatsAvailable;
 			System.out.println("Seats available =======" + totalSeatsAvailable);
 			request.setAttribute("theatreId", theatreId);

@@ -17,9 +17,12 @@ public interface ICancellingDao {
 	
 	public int cancelTicket(int ticketId) throws OMTSException;//cancel
 	
-	public int getCurrentBalance(Transaction transaction) throws OMTSException;//cancel
-	
 	public int refundAfterCancellation(Transaction transaction, int currentBalance) throws OMTSException;//cancel
 	
+	public int deleteBookingDetails(int ticketId) throws OMTSException;
+	
+	public List<Integer> getSeatsByTicket(int ticketId) throws OMTSException;
+	
+	public int deleteTicketFromUser(int ticketId) throws OMTSException;
 
 }
