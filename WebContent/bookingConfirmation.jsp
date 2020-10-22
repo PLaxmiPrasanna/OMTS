@@ -3,8 +3,6 @@
 <%@page import="com.cg.omts.dto.Transaction"%>
 <%@page import="com.cg.omts.dto.Booking"%>
 <%@page import="com.cg.omts.dto.Ticket"%>
-<%@page import="com.cg.omts.dao.UserDaoImpl"%>
-<%@page import="com.cg.omts.dao.IUserDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
@@ -143,7 +141,7 @@ a {
 		India Ltd.
 	</div>
 	<%if(request.getAttribute("message") != null){ %>
-		<%=request.getAttribute("message")	%>
+		<center><h3 style="color:green;"><%=request.getAttribute("message")	%></h3></center>
 	<%} %>
 <center><h1>BOOKING CONFIRMATION</h1></center>
 <center><h2>TICKET DETAILS</h2></center>

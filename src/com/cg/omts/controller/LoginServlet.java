@@ -17,10 +17,10 @@ import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.ICustomerService;
 import com.cg.omts.service.CustomerServiceImpl;
 
-
+import org.apache.log4j.Logger;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-	
+	final static Logger LOGGER = Logger.getLogger(LoginServlet.class);
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
 			String roleCode = loginRegisterService.validateLogin(customer);
 			if(roleCode.equals("adm"))
 			{
+				LOGGER.info("Logged in as Admin");
 				HttpSession session = request.getSession(true);
 				session.setAttribute("username", customer.getCustomerId());
 				session.setAttribute("roleCode", "adm");
@@ -42,6 +43,7 @@ public class LoginServlet extends HttpServlet {
 			}
 			else if(roleCode.equals("usr"))
 			{
+				LOGGER.info("Logged in as User");
 				HttpSession session = request.getSession(true);
 				session.setAttribute("username", customer.getCustomerId());
 				session.setAttribute("roleCode", "usr");
@@ -49,12 +51,14 @@ public class LoginServlet extends HttpServlet {
 				dispatcher.forward(request, response);
 				System.out.println("User");
 			} else  {
+				LOGGER.info("Invalid Credentials");
 				request.setAttribute("errormessage", "Invalid Credentials!!");
 				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		        rd.forward(request, response);
 			}
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 		

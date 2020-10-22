@@ -16,10 +16,10 @@ import com.cg.omts.dto.Screen;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.BookingServiceImpl;
 import com.cg.omts.service.IBookingService;
-
+import org.apache.log4j.Logger;
 @WebServlet("/BookingController")
 public class BookingController extends HttpServlet{
-	
+	 final static Logger LOGGER = Logger.getLogger(BookingController.class);
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -40,6 +40,7 @@ public class BookingController extends HttpServlet{
 			dispatcher = request.getRequestDispatcher("booking.jsp");
 			dispatcher.forward(request, response);
 		}catch(OMTSException e) {
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 		

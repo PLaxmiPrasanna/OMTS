@@ -2,9 +2,6 @@
 <%@page import="com.cg.omts.service.MovieTheatreServiceImpl"%>
 <%@page import="com.cg.omts.dto.Theatre"%>
 <%@page import="java.util.List"%>
-<%@page import="com.cg.omts.service.AdminServiceImpl"%>
-<%@page import="com.cg.omts.dao.AdminDaoImpl"%>
-<%@page import="com.cg.omts.service.IAdminService"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -41,7 +38,7 @@ li a {
 .header {
   overflow: hidden;
   background-color: #291f04;
-  padding: 13px 10px;
+  padding: 0px 10px;
 }
 
 .header a {
@@ -99,7 +96,7 @@ float: right;
 	text-align: center;
 }
 body {
- background-image:url('images/background.jpg');
+ background-image:url('background.jpg');
   background-repeat:repeat-y;
  height: 100vh;
  margin:0;
@@ -178,7 +175,7 @@ tr:hover {background-color:#d1cdd1}
   %> 
 <div class="header">
   <a href="addTheatre.jsp" class = "back" align="right">
-		  	<img src="images/backbutton.png" alt="back button" style="width:60px;height:55px;border:0;">
+		  	<img src="backbutton.png" alt="back button" style="width:20px;height:25px;border:0;">
 		    </a>
   <ul>
   <div class="header-right">
@@ -195,6 +192,9 @@ tr:hover {background-color:#d1cdd1}
 <% if (session != null) {
          if (session.getAttribute("username") != null) {
             int id = (Integer)session.getAttribute("username");
+         }
+         else if(session.getAttribute("roleCode").equals("usr")){
+       	  response.sendRedirect("userhome.jsp");
          }
       } 
 %>
@@ -259,79 +259,3 @@ List<Theatre> theatreList = movieTheatreService.getTheatreDetails();
 </div>
 </body>
 </html>
-<%-- <%@page import="com.cg.omts.dto.Theatre"%>
-<%@page import="java.util.List"%>
-<%@page import="com.cg.omts.service.AdminServiceImpl"%>
-<%@page import="com.cg.omts.dao.AdminDaoImpl"%>
-<%@page import="com.cg.omts.service.IAdminService"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<%
-  response.setHeader("Cache-Control","no-cache");
-  response.setHeader("Cache-Control","no-store");
-  response.setHeader("Pragma","no-cache");
-  response.setDateHeader ("Expires", 0);
-
-  if(session.getAttribute("username")==null)
-      response.sendRedirect("index.jsp");
-
-  %> 
-
-<% if (session != null) {
-         if (session.getAttribute("username") != null) {
-            int id = (Integer)session.getAttribute("username");
-         }
-      } 
-%>
-<form action="./LogoutServlet" method="post">
-      <input type="submit" value="Logout">
-</form>
-<h1>
-<% if(request.getAttribute("message")!=null) { %>
-<%= request.getAttribute("message") %>
-<%} %>
-</h1>
-<h1>List of Theatres </h1>
-<br>
-<table  border=1>
-
-<%IAdminService adminService = new AdminServiceImpl();
-List<Theatre> theatreList = adminService.getTheatreDetails();
-%>
-<tr>
-<td>Theatre Id</td>
-<td>Theater Name</td>
-<td>Theater City</td>
-<td>Theater Manager Name</td>
-<td>Theater Manager Contact</td>
-</tr>
-<tr>
-<%for(Theatre theatre: theatreList) {
-%>
-<td>
-<%=theatre.getTheatreId() %>
-</td>
-<td>
-<%=theatre.getTheatreName() %>
-</td>
-<td>
-<%=theatre.getTheatreCity() %>
-</td>
-<td>
-<%=theatre.getManagerName() %>
-</td>
-<td>
-<%=theatre.getManagerContact() %>
-</td>
-</tr>
-<%} %>
-</table>
-</body>
-</html> --%>

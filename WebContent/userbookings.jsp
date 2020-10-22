@@ -209,7 +209,7 @@ tr:hover {
 			<%
 			}%>
 			<%if(request.getAttribute("message") != null){ %>
-		<%=request.getAttribute("message")%>
+		<center><h3><%=request.getAttribute("message")%></h3></center>
 	<%} %>
 	</table>
 	<div class="footer" style="font-size: 20px">

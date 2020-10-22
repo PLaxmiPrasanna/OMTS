@@ -150,6 +150,9 @@ th, td {
             int id = (Integer)session.getAttribute("username");
          }
       }
+else if(session.getAttribute("roleCode").equals("usr")){
+	  response.sendRedirect("userhome.jsp");
+}
 %>
 </form>
 	<div class="header">
@@ -171,7 +174,7 @@ th, td {
 		<table align = "center">
 			<caption><h2>Enter the Screen Details</h2></caption>
 			<tr><td style = "text-align:center">Screen Id<td><center><input type="text" name = "screenId"  pattern="^[4]{1}[0-9]{3}$" title="Screen Id should start with number 4 and of only 4 digits" required></center>
-			<tr><td style = "text-align:center">Screen Name<td><center><input type = "text" name = "screenName" pattern = "^[a-zA-Z0-9]+$" title = "Screen Name must contain letters and digits only" required></center>
+			<tr><td style = "text-align:center">Screen Name<td><center><input type = "text" name = "screenName" pattern = "^[a-zA-Z0-9]+[a-zA-Z0-9 ]+$" title = "Screen Name must contain letters and digits only" required></center>
 			<tr><td style = "text-align:center">Screen Rows<td><center><input type = "text" name = "screenRows" pattern="^[1-9]{1}[0-9]{1}$" title="Screen rows should consist digits only and with max 99 rows" required></center>
 			<tr><td style = "text-align:center">Screen Columns<td><center><input type = "text" name = "screenColumns" pattern="^[1-9]{1}[0-9]{1}$" title="Screen columns should consist digits only and with max 99 coulumns"required></center>
 			<tr><td style = "text-align:center">Screen Seat Price<td><center><input type = "text" name = "seatPrice" pattern="^[1-9]{1}[0-9]{1,}$" title="Screen Price should a number" required></center>
@@ -180,8 +183,7 @@ th, td {
 		<button type = "submit" class="btn"> Submit </button>
 	</form>
 	<div class="footer" style="font-size: 20px">
-<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-India Ltd.
+<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini India Ltd.
 </div>
 </body>
 </html>

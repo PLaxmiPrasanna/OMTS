@@ -6,9 +6,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Movie To Theatre</title>
 <style>
-	<style>
+	
 	body {
 	margin:0;
 	}
@@ -203,6 +203,9 @@ table.rightTable {
          if (session.getAttribute("username") != null) {
             int id = (Integer)session.getAttribute("username");
          }
+         else if(session.getAttribute("roleCode").equals("usr")){
+       	  response.sendRedirect("userhome.jsp");
+         }
       }
 %>
 </form>
@@ -254,8 +257,7 @@ table.rightTable {
 	
 	</form>
 	<div class="footer" style="font-size: 20px">
-<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-India Ltd.
+<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini India Ltd.
 </div>
 </body>
 </html>

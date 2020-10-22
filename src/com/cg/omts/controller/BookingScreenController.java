@@ -18,9 +18,10 @@ import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.BookingServiceImpl;
 import com.cg.omts.service.IBookingService;
 
+import org.apache.log4j.Logger;
 @WebServlet("/BookingScreenController")
 public class BookingScreenController extends HttpServlet {
-	
+	final static Logger LOGGER = Logger.getLogger(BookingScreenController.class);
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RequestDispatcher dispatcher = null;
@@ -34,6 +35,7 @@ public class BookingScreenController extends HttpServlet {
 			int screenId = Integer.parseInt(request.getParameter("screenId"));
 			List<Screen> screenList = null;
 			if(theatreId != -1 && screenId != -1) {
+				LOGGER.info("Getting list of screen and shows");
 				screenList = new ArrayList<Screen>();
 				screenList = bookingService.getScreenByTheatreId(theatreId);
 				showList = new ArrayList<Show>();
@@ -50,6 +52,7 @@ public class BookingScreenController extends HttpServlet {
 			dispatcher = request.getRequestDispatcher("booking.jsp");
 			dispatcher.forward(request, response);
 		}catch(OMTSException e) {
+			LOGGER.warn("Exception Occurred");
 			e.printStackTrace();
 		}
 	}

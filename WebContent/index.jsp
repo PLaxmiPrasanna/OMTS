@@ -120,22 +120,26 @@ li a:hover {
 	font-size: 15px;
 }
 
-.button {
-	align-content: center;
-	align: center;
-	font-size: 12px;
-	width: 140px;
-	height: 40px;
-	margin-left: -50px;
-	margin-top: 40px;
-	cursor: pointer;
-	padding: 15px 20px;
-	border-radius: 25px;
-	color: black;
-	
-	text-align: center;
-}
 
+.btn {
+  margin-bottom:10%;
+  align: center;
+  background-color: #291f04;
+  border: none;
+  border-radius: 16px;
+  color: white;
+  margin-left: -20px;
+	margin-top: 40px;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 .img {
 	width: 5%;
 	height: 5%;
@@ -230,16 +234,26 @@ img{
 		<ul>
 			<li> <a class="logo"><img src="loggo.PNG" ></img></a></li>
 			<div class="header-right">
-				<li><a href="getstarted.html" class="active"><b>Home </b></a></li>
+				
 				<% if (session.getAttribute("username") == null) {
-			            %><li> <a class="active" href="register.jsp" > <b>Register</b></a></li> <%
+					
+			            %><li><a href="getstarted.html" class="active"><b>Home </b></a></li>
+			            <li> <a class="active" href="register.jsp" > <b>Register</b></a></li> <%
 					}  else {%>
 					 <% }%>
-				<% if (session.getAttribute("username") != null) {
+				<% if (session.getAttribute("username") != null && session.getAttribute("roleCode") == "usr") {
 			            int id = (Integer)session.getAttribute("username");
 			            System.out.println("session id "+ id); 
-					%><li><a class="active" href="./LogoutServlet" id="logout"> <b>Logout</b></a></li><%
-					}  else {%>
+			            
+					%><li><li><a href="userhome.jsp" class="active"><b>Home </b></a></li>
+					<a class="active" href="./LogoutServlet" id="logout"> <b>Logout</b></a></li><%
+					}  else if(session.getAttribute("username") != null && session.getAttribute("roleCode") == "adm"){
+							int adminId = (Integer)session.getAttribute("username");
+		           			System.out.println("session id "+ adminId); 
+		            
+				%><li><li><a href="adminHomePage.jsp" class="active"><b>Home </b></a></li>
+				<a class="active" href="./LogoutServlet" id="logout"> <b>Logout</b></a></li><%
+					} else {%>
 					<li><a class="active" href="#" onclick="login()" id="login"> <b>Login
 					 <% }%>
 					</b></a></li>
@@ -264,13 +278,13 @@ img{
 %>
 	
 <% if(request.getAttribute("logout")!=null) {%>
-<h1 style="color:Green;"><%=request.getAttribute("logout") %></h1>
+<center><h1 style="color:Green;"><%=request.getAttribute("logout") %></h1></center>
 <%} %>
 <% if(request.getAttribute("errormessage")!=null) {%>
-<h1 style="color:Red;"><%=request.getAttribute("errormessage") %></h1>
+<center><h1 style="color:Red;"><%=request.getAttribute("errormessage") %></h1></center>
 <%} %>
 <% if(request.getAttribute("message") != null){ %>
-<h1 style="color:Red;"><%=request.getAttribute("message") %></h1>
+<center><h1 style="color:Red;"><%=request.getAttribute("message") %></h1></center>
 <%} %>
 
 	<div class="loginform" id="log">
@@ -294,7 +308,7 @@ img{
 
 				<tr>
 					<td></td>
-					<td><button type="submit" class="button">
+					<td><button type="submit" class="btn">
 							<b>Login</b>
 						</button></td>
 				</tr>

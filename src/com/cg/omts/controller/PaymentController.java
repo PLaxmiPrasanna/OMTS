@@ -20,8 +20,11 @@ import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.BookingServiceImpl;
 import com.cg.omts.service.IBookingService;
 
+import org.apache.log4j.Logger;
 @WebServlet("/paymentController")
 public class PaymentController extends HttpServlet{
+	final static Logger LOGGER = Logger.getLogger(PaymentController.class);
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub.
@@ -44,18 +47,17 @@ public class PaymentController extends HttpServlet{
 			
 			Boolean flag= bookingService.validatePayment(accountNo, cvv, password);
 			if(flag==true) {
-				//int ticketId = 1;
-				
-				//int totalCost = 1000; 
+				LOGGER.info("Validated credentials");
 				int transactionId = GenerateIds.getTransactionId();
 				int bookingId = GenerateIds.getBookingId();
+				LOGGER.info("Transaction id generated");
 				System.out.println("Transaction Id generated id: "+transactionId);
 				Transaction transaction = new Transaction(transactionId, accountNo, totalCost);
 				System.out.println("Transaction obj in paymentprocess: " + transaction);
 				currentBalance = bookingService.getCurrentBalance(transaction);
 				int isTransact= bookingService.addTransaction(transaction, ticketId);
 				int isdeducted = bookingService.makePayment(accountNo, currentBalance, totalCost);
-				
+				LOGGER.info("Payment made");
 				System.out.println("is Transaction done: "+ isTransact);
 				Date todayDate = new Date(System.currentTimeMillis());
 				System.out.println("Today's date : "+ todayDate);
@@ -89,20 +91,21 @@ public class PaymentController extends HttpServlet{
 					dispatcher.forward(req, resp);
 				}
 			}else {
-				//out.println("Invalid Credentials");
+				LOGGER.info("Invalid Credentials");
 				req.setAttribute("message", "Invalid Credentials");
 				req.setAttribute("totalPrice", totalCost);
 				req.setAttribute("ticketId", ticketId);
 				
-				req.setAttribute("movieName", movieName);
-				req.setAttribute("theatreName", theatreName);
-				req.setAttribute("screenName", screenName);
-				req.setAttribute("showName", showName);
+				req.setAttribute("movieId", movieId);
+				req.setAttribute("theatreId", theatreId);
+				req.setAttribute("screenId", screenId);
+				req.setAttribute("showId", showId);
 				dispatcher = req.getRequestDispatcher("payment.jsp");
 				dispatcher.forward(req, resp);
 			}
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}		
 	}

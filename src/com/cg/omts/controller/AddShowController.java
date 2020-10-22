@@ -2,6 +2,7 @@ package com.cg.omts.controller;
 
 import java.io.IOException;
 
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,10 +21,10 @@ import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.IScreenShowService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
 import com.cg.omts.service.ScreenShowServiceImpl;
-
+import org.apache.log4j.Logger;
 @WebServlet("/AddShowServlet")
 public class AddShowController extends HttpServlet {
-
+	final static Logger LOGGER = Logger.getLogger(AddShowController.class);
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -84,6 +85,7 @@ public class AddShowController extends HttpServlet {
 		  if(existShow.length()==0) {
 			  System.out.println("You can enter");
 		  }else {
+			  LOGGER.info("Show already exists");
 			message += "Show is already available at this time";  
 		  }
 		 List<Integer> sList = screenShowService.getScreenFromMovieAndTheatre(theatreId, movieId);
@@ -95,10 +97,12 @@ public class AddShowController extends HttpServlet {
 		 }
 		 System.out.println(sList);
 		 if((sList.contains(screenId) &&(existShow.length()==0))){
+			 LOGGER.info("all conditions true");
 			 System.out.println("all conditions true");
 			 int rowsInserted = screenShowService.addShow(show);
 			 System.out.println(rowsInserted);
 			 if(rowsInserted > 0) {
+				 LOGGER.info("Added Show Successfully");
 			  request.setAttribute("message", "Successful inserted showId "+showId);
 			  RequestDispatcher rd = request.getRequestDispatcher("displayShows.jsp");
 			  rd.forward(request, response);
@@ -107,6 +111,7 @@ public class AddShowController extends HttpServlet {
 		}catch(OMTSException e) {
 			message+= "Show Id already exists";
 			System.err.println(e);
+			LOGGER.warn("Show alredy exists");
 		}
 		 request.setAttribute("message", message);
 		 RequestDispatcher rd = request.getRequestDispatcher("addShow.jsp");

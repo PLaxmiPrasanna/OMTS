@@ -146,6 +146,9 @@ th, td {
 
   if(session.getAttribute("username")==null)
       response.sendRedirect("index.jsp");
+  else if(session.getAttribute("roleCode").equals("usr")){
+	  response.sendRedirect("userhome.jsp");
+  }
 
   %>
 

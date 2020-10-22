@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Theatre</title>
+<title>Add Show</title>
 <style type="text/css">
 * {box-sizing: border-box;}
 body { 
@@ -129,12 +129,9 @@ background-color: black;
   response.setHeader("Cache-Control","no-store");
   response.setHeader("Pragma","no-cache");
   response.setDateHeader ("Expires", 0);
-  
   if(session.getAttribute("username")==null)
       response.sendRedirect("index.jsp");
   %> 
-
-
 <div class="header">
   <a href="adminHomePage.jsp" class = "back" align="right">
 		  	<img src="backbutton.png" alt="back button" style="width:20px;height:25px;border:0;">
@@ -155,142 +152,81 @@ background-color: black;
          if (session.getAttribute("username") != null) {
             int id = (Integer)session.getAttribute("username");
          }
+     	else if (session.getAttribute("roleCode").equals("usr")) {
+			response.sendRedirect("userhome.jsp");
+		}
       } 
 %>
-<h1 style="color:red">
-<center>
-<% if(request.getAttribute("message")!=null) { %>
-<%=request.getAttribute("message") %>
-<%} %>
-</center>
-</h1>
 <br>
 <br>
-<h1><center> Enter Theatre Details to Register</center> </h1>
-<br>
-<div >
-<form method="post" action="./AddTheatreController">
-<table class ="center">
-<tr>
-<td>Enter Theater id : 
-</td>
-<td>
-<input type="text" name = "theatreId" pattern="[2]{1}[0-9]{3}" title="Theatre Id should start with number 2 and of only 4 digits" required>
-</td>
-</tr>
-<tr>
-<td>
-Enter Theater name :  
-</td>
-<td>
-<input type="text" name="theatreName" pattern= "[a-zA-Z]{1,}" title="Enter only alphabets" required>
-</td>
-</tr>
-<tr>
-<td>
-Enter Theater city: 
-</td>
-<td>
-<input type="text" name = "theatreCity" pattern="[a-zA-Z]{1,}" title="Enter only alphabets" required>
-</td>
-</tr>
-<tr>
-<td>
-Enter Manager name: 
-</td>
-<td>
-<input type="text" name="managerName" pattern="[a-zA-Z]{1,}" title="Enter only alphabets" required>
-</td>
-</tr>
-<tr>
-<td>
-Enter Manager contact: 
-</td>
-<td>
-<input type="text" name="managerContact" pattern="[1-9]{1}[0-9]{9}" title="Enter 10 digit phone number" required>
-</td>
-</tr>
-<tr>
-<td colspan="2" style="text-align:center">
-<input type="submit" class="submit" value = "Register Theatre">
-</td>
-</tr>
-</table>
-</form>
-</div>
-<div class="footer">
-  <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
-</div>
-</body>
-</html>
-<%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Add Show</title>
-</head>
-<body>
-<%
-  response.setHeader("Cache-Control","no-cache");
-  response.setHeader("Cache-Control","no-store");
-  response.setHeader("Pragma","no-cache");
-  response.setDateHeader ("Expires", 0);
-
-  if(session.getAttribute("username")==null)
-      response.sendRedirect("index.jsp");
-
-  %> 
-
-<% if (session != null) {
-         if (session.getAttribute("username") != null) {
-            int id = (Integer)session.getAttribute("username");
-         }
-      } 
-%>
-<form action="./LogoutServlet" method="post">
-      <input type="submit" value="Logout">
-</form>
-<h1>Enter Details to Register Show</h1>
+<center><h1>Enter Details to Register Show</h1>
 <%if(request.getAttribute("message")!= null)  { %>
 <h1><%= request.getAttribute("message")%></h1>
 <%} %>
+</center>
 <br>
+<table class="center">
 <form method="post" action="./AddShowServlet">
+<tr>
+<td>
 Enter Show Id : 
+</td>
+<td>
 <input type="text" name="showId" pattern="[5]{1}[0-9]{3}" title="Show Id should start with number 5 and of only 4 digit" required>
-<br>
-<br>
-Enter Show Name:<select id="showType" name="showName" onchange="myFunction()">
+</td>
+</tr>
+<tr>
+<td>
+Enter Show Name:</td>
+<td>
+<select id="showType" name="showName" onchange="myFunction()">
  <option value="" selected disabled hidden>Choose here</option>
 <option value="morning show">Morning</option>
 <option value="matinee show">Matinee</option>
 <option value="first show">First show</option>
 <option value="second show">Second Show</option>
 </select>
-<br>
-
-<br>
+</td>
+</tr>
+<tr>
+<td>
 Enter Show Start Time:
+</td>
+<td>
 <input type="time" id="stime" name="stime" required>
-<br>
-<br>
+</td>
+</tr>
+<tr>
+<td>
 Enter Theatre Id:
+</td>
+<td>
 <input type="text" name="theatreId" pattern="[2]{1}[0-9]{3}" title="Theatre ID should start with number 2 and of only 4 digits" required>
-<br>
-<br>
+</td>
+</tr>
+<tr>
+<td>
 Enter Movie Id :
+</td>
+<td>
 <input type="text" name="movieId" pattern="[3]{1}[0-9]{3}" title="Movie ID should start with number 3 and of only 4 digits" required>
-<br>
-<br>
+</td>
+</tr>
+<tr>
+<td>
 Enter Screen Id :
+</td>
+<td>
 <input type="text" name="screenId"pattern="[4]{1}[0-9]{3}" title="Screen ID should start with number 4 and of only 4 digits" required>
-<br>
-<br>
-<input type="submit" value="Enter Show">
+</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center">
+<input type="submit" class="submit" value="Enter Show">
+</td>
+</tr>
 </form>
+</table>
 <script type="text/javascript">
 function myFunction() {
   var x = document.getElementById("showType").value;
@@ -312,6 +248,9 @@ function myFunction() {
   //document.getElementById("starttime").min="07:00"
 }
 </script>
-
+<div class="footer">
+  <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
+		India Ltd.
+</div>
 </body>
-</html> --%>
+</html>

@@ -18,11 +18,11 @@ import com.cg.omts.service.BookingServiceImpl;
 import com.cg.omts.service.CancellingServiceImpl;
 import com.cg.omts.service.IBookingService;
 import com.cg.omts.service.ICancellingService;
-;
+import org.apache.log4j.Logger;
 
 @WebServlet("/CancelBookingController")
 public class CancelBookingController extends HttpServlet {
-	
+	final static Logger LOGGER = Logger.getLogger(CancelBookingController.class);
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		int ticketId = Integer.parseInt(request.getParameter("ticketId"));
@@ -47,13 +47,14 @@ public class CancelBookingController extends HttpServlet {
 			
 			currentBalance = bookingService.getCurrentBalance(transaction);
 			isRefunded = cancellingService.refundAfterCancellation(transaction, currentBalance);
-			
+			LOGGER.info("Cancelling and refund successful");
 			request.setAttribute("message", "Successfully cancelled the ticket Id : "+ ticketId);
 			dispatcher = request.getRequestDispatcher("ViewBookingController");
 			dispatcher.forward(request, response);
 			
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occurred");
 			e.printStackTrace();
 		}
 		

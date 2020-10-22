@@ -1,10 +1,11 @@
+<%@page import="com.cg.omts.service.MovieTheatreServiceImpl"%>
+<%@page import="com.cg.omts.dao.MovieTheatreDaoImpl"%>
+<%@page import="com.cg.omts.service.IMovieTheatreService"%>
 <%@page import="com.cg.omts.dto.Show"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.cg.omts.dto.Screen"%>
 <%@page import="com.cg.omts.dto.Theatre"%>
 <%@page import="java.util.List"%>
-<%@page import="com.cg.omts.service.UserServiceImpl"%>
-<%@page import="com.cg.omts.service.IUserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -14,164 +15,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Booking</title>
-<!-- <style>
 
-.header a {
-	float:right;
-	color: white;
-	padding: 12px;
-	text-decoration: none;
-	line-height: 25px;
-	border-radius: 4px;
-	display: block;
-	color: white;
-	text-align: right;
-	width:0%;
-	padding: 14px 20px;
-	width: 200px;
-	font-size: 180%;
-}
-a {
-	float: left;
-}
-
-.header a:hover {
-	background-color: #a89e8a;
-
-}
-
-body {
-	margin:0;
-}
-.bgpic {
-	background-image: url("background.jpg");
-	height: 100vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.header {
-	overflow: hidden;
-	background-color: #291f04;
-	padding: 0px 0px;
-	opacity: 1;
-
-	height:8%;
-}
-.header a.logout {
-	background-color: #291f04;
-	color: white;
-
-}
-.header logo {
-	weight: 10;
-	color: white;
-	font-size: 40px;
-}
-.footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	color: white;
-	background-color:#291f04;
-	margin-top: 100%;
-	width: 100%;
-	height: 6%;
-	font-size: 200%;
-	text-align: center;
-	opacity: 1;
-}
-
-
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
-
-li {
-	float: left;
-}
-
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	width: 200px;
-	font-size: 60%;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-	background-color: #a89e8a;
-	font-size: 200%;
-}
-
-
-
-.loginform {
-	margin-top: 10%;
-	background: #a89e8a;
-	width: 26%;
-	height: 50%;
-	border-radius: 7%;
-	opacity: 0.8;
-	color: white;
-	align: center;
-	margin-left: 35%;
-	display: none;
-	position: absolute;
-	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0
-		rgba(0, 0, 0, .19);
-	border: 3px solid #f1f1f1;
-}
-
-.header a:hover {
-	background-color: #a89e8a;
-}
-
-.header a.active {
-	background-color: #a89e8a;
-	color: white;
-}
-@media screen and (max-width: 500px) {
-	.header a {
-		float: none;
-		display: block;
-		text-align: left;
-	}
-	.header-right {
-		float: none;
-	}
-}
-
-.input {
-	width: 170px;
-	height: 30px;
-	border-radius: 10px;
-	background: rgba(255, 255, 255, .1);
-	font-size: 15px;
-}
-
-.footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	color: white;
-	background-color: #a89e8a;
-	margin-top: 100%;
-	width: 100%;
-	height: 5%;
-	font-size: 200%;
-	text-align: center;
-	opacity: 0.7;
-}
-
-</style>
- -->
  <style>
 
 .header a {
@@ -247,6 +91,27 @@ body {
 	font-size:15px;
 	background-color:#e3dddc;
 }
+.btn {
+	margin-bottom: 10%;
+	align: center;
+	background-color: #291f04;
+	border: none;
+	border-radius: 16px;
+	color: white;
+	padding: 12px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 20px 550px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+}
+
 </style>
  
  <script type="text/javascript">
@@ -311,10 +176,11 @@ body {
 						<%
 							String mId = request.getParameter("movieId");
 							int movieId = Integer.parseInt(mId);
-							IUserService userService = new UserServiceImpl();
-							List<Integer> theatreIdList = userService.getTheatresByMovie(movieId);
+							IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl();
+							
+							List<Integer> theatreIdList = movieTheatreService.getTheatresByMovie(movieId);
 			
-							List<Theatre> theatresList = userService.getTheatres(theatreIdList);
+							List<Theatre> theatresList = movieTheatreService.getTheatres(theatreIdList);
 							for(Theatre theatre : theatresList){
 						%>
 						<option value = <%=theatre.getTheatreId() %>><%=theatre.getTheatreName() %></option>
@@ -465,9 +331,9 @@ body {
 		
 	</form><br><br><br>
 	<% if((request.getAttribute("theatreId") != null) && (request.getAttribute("screenId") != null) && (request.getAttribute("showId") != null)){ %>
-			<input type="button" id="myBtn" value="Proceed to Pay" onclick="proceedToPay()">
+			<input type="button" id="myBtn" value="Proceed to Pay" onclick="proceedToPay()" class="btn">
 	<%}else{ %>		
-			<input type="button" id="myBtn" value="Proceed to Pay" disabled>
+			<input type="button" id="myBtn" value="Proceed to Pay" disabled class="btn">
 			<!-- <button onclick="proceedToPay()" diabled>Proceed to Pay</button> -->
 	<%} %>
 	</center>

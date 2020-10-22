@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,7 +7,6 @@
 </head>
 <body class = "bgpic">
 <style>
-
 body {
 	margin:0;
 }
@@ -30,12 +28,10 @@ body {
 a {
 	float: left;
 }
-
 .header a:hover {
 	background-color: #a89e8a;
 	font-size: 200%;
 }
-
 .bgpic {
 	background-image: url("background.jpg");
 	height: 100vh;
@@ -54,7 +50,6 @@ a {
 .header a.logout {
 	background-color: #291f04;
 	color: white;
-
 }
 .header logo {
 	weight: 10;
@@ -74,7 +69,6 @@ a {
 	text-align: center;
 	opacity: 1;
 }
-
 @media screen and (max-width: 500px) {
 	.header a {
 		float: none;
@@ -85,7 +79,6 @@ a {
 		float: none;
 	}
 }
-
 .input {
 	width: 170px;
 	height: 30px;
@@ -93,7 +86,6 @@ a {
 	background: rgba(255, 255, 255, .1);
 	font-size: 15px;
 }
-
 .footer {
 	position: fixed;
 	left: 0;
@@ -107,14 +99,28 @@ a {
 	text-align: center;
 	opacity: 0.7;
 }
-
+.btn {
+  
+  background-color: #291f04;
+  border-radius: 16px;
+  color: white;
+  border:none;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 </style>
 <%
   response.setHeader("Cache-Control","no-cache");
   response.setHeader("Cache-Control","no-store");
   response.setHeader("Pragma","no-cache");
   response.setDateHeader ("Expires", 0);
-
   if(session.getAttribute("username")==null)
       response.sendRedirect("index.jsp");
   else if(session.getAttribute("roleCode").equals("adm")){
@@ -136,7 +142,7 @@ a {
 <input type = "hidden" value=<%=request.getAttribute("showId") %> name = "showId">
 <input type = "hidden" value=<%=request.getAttribute("screenId") %> name = "screenId">
 <%if(request.getAttribute("message") != null){%>
-	<%=request.getAttribute("message")	%>
+	<center><h3><%=request.getAttribute("message")	%></h3></center>
 <%} %>
 <br><br><br><br><br>
 <table align="center">
@@ -145,7 +151,7 @@ a {
 <tr><td>Cvv<td><input type="number" name="cvv"  pattern="^[0-9]{3}$" title="CVV should be of 3 digits"required>
 <tr><td>Password<td><input type="password" name="pass" required>
 <tr><td>Total Amount<td><input type = "text" name = "totalPrice" value = <%=request.getAttribute("totalPrice") %> readonly>
-<br><br><tr><td><td><input type ="submit" value="PAY">
+<br><br><tr><td><td><input type ="submit" value="PAY" class="btn">
 </table>
 </form>
 <div class="footer" style="font-size: 20px">

@@ -14,13 +14,14 @@ import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
 
+import org.apache.log4j.Logger;
 /**
  * Servlet implementation class AddTheatreServlet
  */
 @WebServlet("/AddTheatreController")
 public class AddTheatreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+	final static Logger LOGGER = Logger.getLogger(AddTheatreController.class);
     public AddTheatreController() {
         super();
     }
@@ -45,13 +46,16 @@ public class AddTheatreController extends HttpServlet {
 		try {
 			rowsInserted = movieTheatreService.addTheatre(theatre);
 		} catch (OMTSException e) {
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 		if(rowsInserted!=0) {
+			LOGGER.info("Theatre inserted");
 			request.setAttribute("message", "Successfully registered Theatre with theatreId :"+theatreId);
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("displayTheatres.jsp");
 			requestDispatcher.forward(request, response);
 		}else {
+			LOGGER.info("Couldn't insert theatre");
 			request.setAttribute("message", "Could not insert the Threatre, the theatreId :"+theatreId+" is already existing");
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("addTheatre.jsp");
 			requestDispatcher.forward(request, response);

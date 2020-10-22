@@ -14,10 +14,12 @@ import com.cg.omts.dto.Movie;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
-
+import org.apache.log4j.Logger;
 @WebServlet("/MovieDetailsServlet")
 public class MovieDetailsController extends HttpServlet{
 
+	final static Logger LOGGER = Logger.getLogger(MovieDetailsController.class);
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -27,11 +29,13 @@ public class MovieDetailsController extends HttpServlet{
 		IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl();
 		try {
 			Movie movie = movieTheatreService.getMovieDetails(movieId);
+			LOGGER.info("Getting movie object");
 			request.setAttribute("movie", movie);
 			dispatcher = request.getRequestDispatcher("moviedetails.jsp");
 			dispatcher.forward(request, response);
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 	}

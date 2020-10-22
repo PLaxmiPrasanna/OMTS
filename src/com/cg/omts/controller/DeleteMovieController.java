@@ -16,10 +16,12 @@ import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
 
+import org.apache.log4j.Logger;
+
 @WebServlet("/DeleteMovieServlet")
 public class DeleteMovieController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	final static Logger LOGGER = Logger.getLogger(DeleteMovieController.class);  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl();
 		
@@ -45,21 +47,25 @@ public class DeleteMovieController extends HttpServlet {
 			if(isMIdExists) {
 				int rowsDeleted = movieTheatreService.deleteMovie(movieId);
 				if(rowsDeleted > 0) {
+					LOGGER.info("Movie deleted successfully");
 					message = "Successfully deleted record with movie ID: "+movieId;
 					request.setAttribute("message", message);
 					request.getRequestDispatcher("adminHomePage.jsp").forward(request, response);
 				} else { 
+					LOGGER.info("Failed to delete movie");
 					message = "Failed to delete the record with movie ID: "+movieId;
 					request.setAttribute("message", message);
 					request.getRequestDispatcher("adminHomePage.jsp").forward(request, response);
 				}
 			} else {
+				LOGGER.info("Invalid movie iD");
 				message = "Enter a valid movie ID";
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("adminHomePage.jsp").forward(request, response);
 			}
 		} catch (OMTSException e1) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occured");
 			e1.printStackTrace();
 		}
 				

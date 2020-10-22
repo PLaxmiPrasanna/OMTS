@@ -152,6 +152,9 @@ th, td {
          if (session.getAttribute("username") != null) {
             int id = (Integer)session.getAttribute("username");
          }
+         else if(session.getAttribute("roleCode").equals("usr")){
+       	  response.sendRedirect("userhome.jsp");
+         }
       }
 %>
 </form>

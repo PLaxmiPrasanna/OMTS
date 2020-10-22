@@ -80,7 +80,8 @@ body {
 table {
 	background-color: #ffff1a;
 	border-collapse: collapse;
-	width: 70%;
+	font-size:18px;
+	width: 50%;
 	height: 20%
 }
 

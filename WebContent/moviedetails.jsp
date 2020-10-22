@@ -87,7 +87,8 @@ table {
 	background-color: #ffff1a;
 	border-collapse: collapse;
 	width: 40%;
-	height: 30%
+	height: 30%;
+	font-size:18px;
 }
 
 th, td {

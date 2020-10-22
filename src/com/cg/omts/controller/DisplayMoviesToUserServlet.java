@@ -22,12 +22,12 @@ import com.cg.omts.dto.Theatre;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
-
+import org.apache.log4j.Logger;
 
 @WebServlet("/DisplayMoviesToUser")
 public class DisplayMoviesToUserServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-	
+	final static Logger LOGGER = Logger.getLogger(DisplayMoviesToUserServlet.class);
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -44,9 +44,11 @@ public class DisplayMoviesToUserServlet extends HttpServlet{
 			String city = request.getParameter("city");
 			request.setAttribute("city", city);
 			if(city.equals("All Cities")) {
+				LOGGER.info("Selected all cities option");
 				dispatcher = request.getRequestDispatcher("userhome.jsp");
 				dispatcher.include(request, response);
 			} else {
+				LOGGER.info("Selected a city from above cities");
 				List<Integer> movieIdList = new ArrayList<Integer>();
 				List<Integer> theatreIdList = movieTheatreService.getTheatresByCity(city);
 				movieIdList = movieTheatreService.getMoviesByTheatre(theatreIdList);
@@ -72,6 +74,7 @@ public class DisplayMoviesToUserServlet extends HttpServlet{
 				dispatcher.include(request, response);
 			}
 		} catch(OMTSException e) {
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 	}

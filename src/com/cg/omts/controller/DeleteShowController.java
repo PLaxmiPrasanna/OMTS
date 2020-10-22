@@ -17,7 +17,7 @@ import com.cg.omts.dto.Theatre;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IScreenShowService;
 import com.cg.omts.service.ScreenShowServiceImpl;
-
+import org.apache.log4j.Logger;
 
 /**
  * Servlet implementation class DeleteShowController
@@ -25,7 +25,7 @@ import com.cg.omts.service.ScreenShowServiceImpl;
 @WebServlet("/DeleteShowServlet")
 public class DeleteShowController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	final static Logger LOGGER = Logger.getLogger(DeleteShowController.class);  
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -43,8 +43,10 @@ public class DeleteShowController extends HttpServlet {
 		
 		IScreenShowService screenShowService = new ScreenShowServiceImpl();
 		try {
+			LOGGER.info("Getting show list");
 			List<Show> searchShowList = screenShowService.getShowByName(showName);
 			if(searchShowList.size()==0) {
+				LOGGER.info("Show name not found");
 				request.setAttribute("errorMessage","The Show Name does not exist");
 			}
 			request.setAttribute("searchShowList", searchShowList);
@@ -53,6 +55,7 @@ public class DeleteShowController extends HttpServlet {
 			
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 	}

@@ -17,10 +17,11 @@ import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
 
+import org.apache.log4j.Logger;
 @WebServlet("/GetTheatreDetails")
 public class GetTheatreDetailsController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	final static Logger LOGGER = Logger.getLogger(GetTheatreDetailsController.class);
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -33,15 +34,16 @@ public class GetTheatreDetailsController extends HttpServlet {
 			request.setAttribute("theatreCity", theatreCity);
 			
 			getTheatres = movieTheatreService.getTheatreDetails(theatreCity);
+			LOGGER.info("List of theatres derived");
 			request.setAttribute("theatreDetails", getTheatres);
 			
 			getMovieDetails = movieTheatreService.getMovieIdName();
-				 
+			LOGGER.info("List of movies derived");	 
 			request.setAttribute("movieDetails", getMovieDetails);
 			request.getRequestDispatcher("addMovieToTheatre.jsp").forward(request, response);
 			
 		} catch (OMTSException e) {
-			
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 		

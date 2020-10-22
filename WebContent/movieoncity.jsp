@@ -3,8 +3,6 @@
 <%@page import="java.util.Set"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="com.cg.omts.service.UserServiceImpl"%>
-<%@page import="com.cg.omts.service.IUserService"%>
 <%@page import="com.cg.omts.dto.Movie"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -96,7 +94,8 @@ table {
 	background-color: #ffff1a;
 	border-collapse: collapse;
 	width: 40%;
-	height: 30%
+	height: 30%;
+	font-size:18px;
 }
 
 th, td {

@@ -17,10 +17,11 @@ import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.IScreenShowService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
 import com.cg.omts.service.ScreenShowServiceImpl;
-
+import org.apache.log4j.Logger;
 @WebServlet("/DeleteTheatreServlet")
 public class DeleteTheatreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	final static Logger LOGGER = Logger.getLogger(DeleteTheatreController.class);
     public DeleteTheatreController() {
         super();
         // TODO Auto-generated constructor stub
@@ -32,6 +33,7 @@ public class DeleteTheatreController extends HttpServlet {
 		try {
 			List<Theatre> searchTheatreList = movieTheatreService.getTheatreByName(theatreName);
 			if(searchTheatreList.size()==0) {
+				LOGGER.info("Theatre name does not exist");
 				request.setAttribute("errorMessage","The Theatre Name does not exist");
 			}
 			request.setAttribute("searchTheatreList", searchTheatreList);
@@ -55,10 +57,12 @@ public class DeleteTheatreController extends HttpServlet {
 
 		IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl(); 
 		try {
+			LOGGER.info("Theatre is deleted");
 			rowsDeleted = movieTheatreService.deleteTheatre(theatreId);
 			response.sendRedirect("./deleteTheatre.jsp?message=Successfully Deleted");
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 		

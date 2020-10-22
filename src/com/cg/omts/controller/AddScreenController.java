@@ -1,6 +1,7 @@
 package com.cg.omts.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,11 +13,11 @@ import com.cg.omts.dto.Screen;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IScreenShowService;
 import com.cg.omts.service.ScreenShowServiceImpl;
-
+import org.apache.log4j.Logger;
 @WebServlet("/AddScreenServlet")
 public class AddScreenController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+	final static Logger LOGGER = Logger.getLogger(AddScreenController.class);
+	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			}
 
@@ -34,17 +35,20 @@ public class AddScreenController extends HttpServlet {
 				Screen screen = new Screen(screenId, screenName, screenRows, screenColumns);
 				System.out.println("In AddScreenController screen: "+ screen);
 				ServletContext context=getServletContext();
-				
+				LOGGER.info("In AddScreenController");
+				request.setAttribute("message", "Successfully created screen");
 				request.setAttribute("seatPrice", seatPrice);
 				context.setAttribute("screen", screen);
 				request.getRequestDispatcher("getTheatreScreenDetails.jsp").forward(request, response);
 			} else {
+				LOGGER.info("Screen already exists");
 				String message = "Screen with ID: "+screenId + " already exists!!";
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("addScreen.jsp").forward(request, response);
 			}
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occurred");
 			e.printStackTrace();
 		}
 		

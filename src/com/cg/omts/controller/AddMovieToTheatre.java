@@ -1,6 +1,7 @@
 package com.cg.omts.controller;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -12,10 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
+import org.apache.log4j.Logger;
 
 @WebServlet("/AddMovieToTheatre")
 public class AddMovieToTheatre extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	static final Logger LOGGER = Logger.getLogger(AddMovieToTheatre.class);
    
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -41,26 +43,31 @@ public class AddMovieToTheatre extends HttpServlet {
 						
 						isAdded = movieTheatreService.addMovieToTheatre(movieId, theatreId);
 						if(isAdded) {
+							LOGGER.info("Movie added successfully");
 							message = "Successfully added movie with ID: "+ movieId + " to the theatre with ID: " + theatreId;
 							request.setAttribute("message", message);
 							request.getRequestDispatcher("getTheatreDetails.jsp").forward(request, response);
 						} else {
+							LOGGER.info("Failed to create movie");
 							message = "Failed to add movie with ID: "+ movieId + " to the theatre with ID: " + theatreId;
 							request.setAttribute("message", message);
 							request.getRequestDispatcher("getTheatreDetails.jsp").forward(request, response);
 						}
 				} else {
+					LOGGER.info("Movie already exists");
 					message = "Movie with ID: "+ movieId + " already exists in Theatre with ID: "+ theatreId;
 					request.setAttribute("message", message);
 					request.getRequestDispatcher("getTheatreDetails.jsp").forward(request, response);
 				}
 			} else {
+				LOGGER.info("Entered Invalid thetre ID and Movie ID");
 				message = "Enter valid Theate ID and Movie ID";
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("getTheatreDetails.jsp").forward(request, response);
 			}
 		} catch (OMTSException e1) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occurred");
 			e1.printStackTrace();
 		}
 		

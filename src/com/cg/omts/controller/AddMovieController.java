@@ -15,12 +15,11 @@ import com.cg.omts.dto.Movie;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IMovieTheatreService;
 import com.cg.omts.service.MovieTheatreServiceImpl;
-
+import org.apache.log4j.Logger;
 
 @WebServlet("/AddMovieServlet")
 public class AddMovieController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+	static final Logger LOGGER = Logger.getLogger(AddMovieController.class);        
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int movieId = Integer.parseInt(request.getParameter("movieId"));
@@ -37,20 +36,24 @@ public class AddMovieController extends HttpServlet {
 		String message = " ";
 		try {
 			if(movieTheatreService.isMovieIdExists(movieId)){
+				LOGGER.info("Movie already exists.");
 				message = "Movie with ID: "+movieId+" already exists!!";
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("addMovie.jsp").forward(request, response);
 			} else {
+				LOGGER.info("Adding new movie");
 				Movie movie = new Movie(movieId, movieName, movieGenre, movieDirector, movieLength, movieLanguage, movieReleaseDate);
 				
 				boolean isMovieAdded = false;
 				isMovieAdded = movieTheatreService.addMovie(movie);
 				if(isMovieAdded) {
+					LOGGER.info("New Movie added");
 					message = "Movie details with ID : "+ movie.getMovieId()+ " is successfully added";
 					request.setAttribute("message", message);
 					request.getRequestDispatcher("addMovie.jsp").forward(request, response);
 				}
 				else {
+					LOGGER.warn("Failed to add movie");
 					message = "Failed to add movie details with ID : "+ movie.getMovieId();
 					request.setAttribute("message", message);
 					request.getRequestDispatcher("addMovie.jsp").forward(request, response);

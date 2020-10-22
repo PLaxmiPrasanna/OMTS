@@ -70,7 +70,7 @@ public class ScreenShowDaoImpl implements IScreenShowDao, IScreenShowQueryConsta
 				prepareStatement.close();
 			} catch (SQLException e) {
 
-				throw new OMTSException("Failed to get the screen details" + e);
+				throw new OMTSException("Failed to get the screen details" + e.getMessage());
 			}
 		}
 		return false;

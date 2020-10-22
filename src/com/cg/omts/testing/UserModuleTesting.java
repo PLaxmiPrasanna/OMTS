@@ -2,6 +2,7 @@ package com.cg.omts.testing;
 
 import static org.junit.Assert.assertEquals;
 
+
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -18,20 +19,31 @@ import com.cg.omts.dto.Ticket;
 import com.cg.omts.dto.Transaction;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.BookingServiceImpl;
+import com.cg.omts.service.CancellingServiceImpl;
+import com.cg.omts.service.CustomerServiceImpl;
 import com.cg.omts.service.IBookingService;
-import com.cg.omts.service.IUserService;
-import com.cg.omts.service.UserServiceImpl;
+import com.cg.omts.service.ICancellingService;
+import com.cg.omts.service.ICustomerService;
+import com.cg.omts.service.IMovieTheatreService;
+import com.cg.omts.service.IScreenShowService;
+import com.cg.omts.service.MovieTheatreServiceImpl;
+import com.cg.omts.service.ScreenShowServiceImpl;
+
 import static com.cg.omts.dto.Ticket.TicketStatus;
 
 public class UserModuleTesting {
 
-	IUserService userService = new UserServiceImpl();
+
+	IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl(); 
+	IScreenShowService screenShowService = new ScreenShowServiceImpl(); 
 	IBookingService bookingService = new BookingServiceImpl();
+	ICancellingService cancellingService = new CancellingServiceImpl();
+	ICustomerService customerService = new CustomerServiceImpl();
 	
 	@Test
 	public void getMovieDetailsTest() throws OMTSException {
 		try {
-			Movie actualMovie = userService.getMovieDetails(1);
+			Movie actualMovie = movieTheatreService.getMovieDetails(1);
 			assertNotNull(actualMovie);
 		}
 		catch(OMTSException e) {
@@ -61,7 +73,7 @@ public class UserModuleTesting {
 			selectedSeatsList.add(3);
 			selectedSeatsList.add(4);
 			
-			int isAllocated = userService.allocateSeat(selectedSeatsList, screenId);
+			int isAllocated = bookingService.allocateSeat(selectedSeatsList, screenId);
 			assertTrue(isAllocated > 0);
 		}
 		catch(OMTSException e) {
@@ -79,7 +91,7 @@ public class UserModuleTesting {
 			seatsList.add(3);
 			seatsList.add(4);
 			
-			int isAssigned = userService.assignSeatsToTickets(ticketId, seatsList);
+			int isAssigned = bookingService.assignSeatsToTickets(ticketId, seatsList);
 			assertTrue(isAssigned > 0);
 		}
 		catch(OMTSException e) {
@@ -99,7 +111,7 @@ public class UserModuleTesting {
 			expectedSeatsList.add(3);
 			expectedSeatsList.add(4);
 			
-			List<Integer> actualSeatsList = userService.getSeatsByTicket(ticketId);
+			List<Integer> actualSeatsList = bookingService.getSeatsByTicket(ticketId);
 			assertEquals(expectedSeatsList, actualSeatsList);
 		}
 		catch(OMTSException e) {
@@ -115,7 +127,7 @@ public class UserModuleTesting {
 			int ticketId = 1;
 			//Transaction actualTransaction = new Transaction(1, 123456, 900);
 			
-			Transaction expectedTransaction = userService.getTransactionDetails(ticketId);
+			Transaction expectedTransaction = cancellingService.getTransactionDetails(ticketId);
 			assertNotNull(expectedTransaction);
 			
 		}
@@ -129,7 +141,7 @@ public class UserModuleTesting {
 		try {
 			int ticketId = 1;
 						
-			int isDeleted = userService.deleteBookingDetails(ticketId);
+			int isDeleted = cancellingService.deleteBookingDetails(ticketId);
 			assertTrue(isDeleted > 0);
 		}
 		catch(OMTSException e) {
@@ -142,7 +154,7 @@ public class UserModuleTesting {
 		try {
 			int ticketId = 1;
 						
-			int isDeleted = userService.deleteTransaction(ticketId);
+			int isDeleted = cancellingService.deleteTransaction(ticketId);
 			System.out.println(isDeleted);
 			assertTrue(isDeleted > 0);
 		}
@@ -156,7 +168,7 @@ public class UserModuleTesting {
 		try {
 			int ticketId = 1;
 						
-			int isDeleted = userService.deleteAllocatedSeats(ticketId);
+			int isDeleted = cancellingService.deleteAllocatedSeats(ticketId);
 			assertTrue(isDeleted > 0);
 		}
 		catch(OMTSException e) {
@@ -173,7 +185,7 @@ public class UserModuleTesting {
 			seatsList.add(3);
 			seatsList.add(4);
 			
-			int isDeleted = userService.deleteSeatDetails(seatsList);
+			int isDeleted = cancellingService.deleteSeatDetails(seatsList);
 			assertTrue(isDeleted > 0);
 		}
 		catch(OMTSException e) {
@@ -186,7 +198,7 @@ public class UserModuleTesting {
 		try {
 			int ticketId = 1;
 						
-			int isCancelled = userService.cancelTicket(ticketId);
+			int isCancelled = cancellingService.cancelTicket(ticketId);
 			assertTrue(isCancelled > 0);
 		}
 		catch(OMTSException e) {
@@ -199,7 +211,7 @@ public class UserModuleTesting {
 		try {
 			Transaction transaction = new Transaction(1, 123456, 900);
 						
-			int currentBalance = userService.getCurrentBalance(transaction);
+			int currentBalance = bookingService.getCurrentBalance(transaction);
 			assertTrue(currentBalance > 0);
 		}
 		catch(OMTSException e) {
@@ -212,7 +224,7 @@ public class UserModuleTesting {
 		try {
 			Transaction transaction = new Transaction(1, 123456, 900);
 			int currentBalance = 24600;
-			int isCancelled = userService.refundAfterCancellation(transaction, currentBalance);
+			int isCancelled = cancellingService.refundAfterCancellation(transaction, currentBalance);
 			assertTrue(isCancelled > 0);
 		}
 		catch(OMTSException e) {
@@ -226,7 +238,7 @@ public class UserModuleTesting {
 		try {
 		List<Integer> expectedTheatreList = new ArrayList<Integer>();
 		expectedTheatreList.add(1);
-		List<Integer> actualTheatreList = userService.getTheatresByMovie(movieId);
+		List<Integer> actualTheatreList = movieTheatreService.getTheatresByMovie(movieId);
 		assertEquals(expectedTheatreList,actualTheatreList);
 		}
 		catch(OMTSException e) {
@@ -241,7 +253,7 @@ public class UserModuleTesting {
 		theatreIdList.add(1);
 		List<String> expectedTheatreIdList = new ArrayList<String>();
 		expectedTheatreIdList.add("vimal");
-		List<String> actualTheatreIdList = userService.getTheatreNames(theatreIdList);
+		List<String> actualTheatreIdList = movieTheatreService.getTheatreNames(theatreIdList);
 		assertEquals(expectedTheatreIdList,actualTheatreIdList);
 		}
 		catch(OMTSException e) {
@@ -256,7 +268,7 @@ public class UserModuleTesting {
 			int ticketId=1;
 			String status="BOOKED";
 			int expected = 1;
-			int actual = userService.setTicketStatus(ticketId, status);
+			int actual = bookingService.setTicketStatus(ticketId, status);
 			assertEquals(expected, actual);
 			
 			
@@ -271,7 +283,7 @@ public class UserModuleTesting {
 			Transaction transaction = new Transaction(3,934784,1890);
 			int ticketId = 3;
 			int userId=3;
-			int actual = userService.addTransaction(transaction, ticketId);
+			int actual = bookingService.addTransaction(transaction, ticketId);
 			assertTrue(actual > 0);
 		}catch(OMTSException e) {
 			throw new OMTSException("Exception in testing");
@@ -286,7 +298,7 @@ public class UserModuleTesting {
 			LocalDate localDate = LocalDate.of(2004, 10, 12);
 			Date date = Date.valueOf(localDate);
 			Booking booking = new Booking(3,date);
-			int addBooking = userService.addBooking(booking, ticketId, transactionId);
+			int addBooking = bookingService.addBooking(booking, ticketId, transactionId);
 			assertTrue(addBooking>0);
 			
 		}catch(OMTSException e) {
@@ -299,7 +311,7 @@ public class UserModuleTesting {
 		try {
 		int seatId=1;
 		String status="BOOKED";
-		int actual = userService.setSeatStatus(seatId, status);
+		int actual = bookingService.setSeatStatus(seatId, status);
 		assertTrue(actual > 0);
 		} catch(OMTSException e) {
 			throw new OMTSException("Exception in testing");
@@ -307,36 +319,23 @@ public class UserModuleTesting {
 	}
 	
 	
-	@Test
-	public void validatePaymentTest() throws OMTSException{
-		boolean validate=true;
-		try {
-			boolean result =userService.validatePayment(123456, 662, "Ashu");
-			assertEquals(validate,result);
-		}
-		catch(OMTSException e) {
-			throw new OMTSException("Exception in testing");
-		}
-	}
+//	@Test
+//	public void validatePaymentTest() throws OMTSException{
+//		boolean validate=true;
+//		try {
+//			boolean result = customerService.validatePayment(123456, 662, "Ashu");
+//			assertEquals(validate,result);
+//		}
+//		catch(OMTSException e) {
+//			throw new OMTSException("Exception in testing");
+//		}
+//	}
 
-	@Test
-	public void seatAvailabiltyTest() throws OMTSException {
-		try {
-			int seatId = 1;
-
-			Seat actual = userService.seatAvailability(seatId);
-
-			assertNotNull(actual);
-
-		} catch (OMTSException e) {
-			throw new OMTSException("Exception in testing");
-		}
-	}
 	@Test
 	public void getTicketTest() throws OMTSException{
 		try {
 			int ticketId=1;
-			Ticket actual = userService.getTicket(ticketId);
+			Ticket actual = bookingService.getTicket(ticketId);
 			assertNotNull(actual);
 		}catch (OMTSException e) {
 			throw new OMTSException("Exception in testing");

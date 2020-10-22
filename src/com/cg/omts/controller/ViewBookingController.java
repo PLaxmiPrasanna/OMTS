@@ -20,10 +20,10 @@ import com.cg.omts.dto.Transaction;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.BookingServiceImpl;
 import com.cg.omts.service.IBookingService;
-
+import org.apache.log4j.Logger;
 @WebServlet("/ViewBookingController")
 public class ViewBookingController extends HttpServlet{
-
+	public static Logger LOGGER = Logger.getLogger(ViewBookingController.class);
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -45,7 +45,7 @@ public class ViewBookingController extends HttpServlet{
 		List<String> screenNameList = new ArrayList<String>();
 		List<Integer> movieIdList = new ArrayList<Integer>();
 		try {
-			
+			LOGGER.info("Getting ticketid list by userid");
 			ticketIdList = bookingService.getTicketIdsByUser(userId);
 			ticketList = bookingService.getTicketByIDS(ticketIdList);
 			for(Ticket ticket : ticketList) {
@@ -53,18 +53,26 @@ public class ViewBookingController extends HttpServlet{
 				
 			}
 			transactionList = bookingService.getTransactionByTicket(ticketIdList);
+			LOGGER.info("getting transaction id list by ticketid list");
 			bookingList = bookingService.getBookingByUser(transactionList);
+			LOGGER.info("getting booking id list by transaction list");
 			theatreNameList = bookingService.getTheatreNames(theatreIdList);
+			LOGGER.info("getting names of theatre from theatre id list");
 			movieIdList = bookingService.getMoviesByTheatre(theatreIdList);
+			LOGGER.info("getting movieid list by theatre id list");
 			moviesList = bookingService.getMoviesById(movieIdList);
+			LOGGER.info("getting movies list by movieid list");
 			for(Movie movie : moviesList) {
 				movieNameList.add(movie.getMovieName());
 			}
 			showNameList = bookingService.getShowNamesByTheatre(theatreIdList);
 			screenNameList = bookingService.getScreenNamesByTheatre(theatreIdList);
 			System.out.println(ticketList);
+			LOGGER.info("getting show names list by theatreid list");
+			LOGGER.info("getting screen name list by theatreid list");
 			System.out.println(transactionList);
 			System.out.println(bookingList);
+			LOGGER.info("All the details successfully set");
 			req.setAttribute("movieNameList", movieNameList);
 			req.setAttribute("ticketList", ticketList);
 			req.setAttribute("bookingList", bookingList);
@@ -78,6 +86,7 @@ public class ViewBookingController extends HttpServlet{
 			dispatcher.forward(req, resp);
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception occured");
 			e.printStackTrace();
 		}
 		

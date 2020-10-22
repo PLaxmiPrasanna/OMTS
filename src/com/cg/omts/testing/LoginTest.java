@@ -1,6 +1,7 @@
 package com.cg.omts.testing;
 
 import static org.junit.Assert.assertEquals;
+
 import static org.junit.Assert.assertTrue;
 
 import java.sql.Date;
@@ -9,9 +10,7 @@ import org.junit.Test;
 
 import com.cg.omts.dto.Customer;
 import com.cg.omts.exceptions.OMTSException;
-import com.cg.omts.service.AdminServiceImpl;
 import com.cg.omts.service.CustomerServiceImpl;
-import com.cg.omts.service.IAdminService;
 import com.cg.omts.service.ICustomerService;
 
 public class LoginTest {

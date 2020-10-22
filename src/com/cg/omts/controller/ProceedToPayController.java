@@ -18,11 +18,11 @@ import com.cg.omts.dto.Ticket.TicketStatus;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.BookingServiceImpl;
 import com.cg.omts.service.IBookingService;
-
+import org.apache.log4j.Logger;
 
 @WebServlet("/ProceedToPayController")
 public class ProceedToPayController extends HttpServlet {
-	
+	final static Logger LOGGER = Logger.getLogger(MovieDetailsController.class);
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		IBookingService bookingService = new BookingServiceImpl();
@@ -38,9 +38,12 @@ public class ProceedToPayController extends HttpServlet {
 		List<Integer> selectedSeatsList = new ArrayList<Integer>();
 		int seatStartId = GenerateIds.getSeatId();
 		System.out.println(seatStartId);
+		LOGGER.info("Ticket Id generated");
 		for(int seats = 0; seats < noOfSeats; seats++) {
 			selectedSeatsList.add(seatStartId++);
 		}
+		LOGGER.info("Selected seats list generated");
+		
 		HttpSession session = request.getSession();
 		int userId = (int) session.getAttribute("username");
 		try {
@@ -50,6 +53,7 @@ public class ProceedToPayController extends HttpServlet {
 			bookingService.allocateSeat(selectedSeatsList, screenId);
 			bookingService.assignSeatsToTickets(ticketId, selectedSeatsList);
 			bookingService.setTicketStatus(ticketId, "INPROCESS");
+			LOGGER.info("Ticket id status set to InProcess");
 			request.setAttribute("ticketId", ticketId);
 			request.setAttribute("movieId", movieId);
 			request.setAttribute("theatreId", theatreId);
@@ -60,6 +64,7 @@ public class ProceedToPayController extends HttpServlet {
 			dispatcher.forward(request, response);
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
+			LOGGER.warn("Exception Occured");
 			e.printStackTrace();
 		}
 	}

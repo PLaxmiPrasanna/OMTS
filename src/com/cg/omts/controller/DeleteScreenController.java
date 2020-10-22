@@ -15,12 +15,12 @@ import com.cg.omts.dto.Screen;
 import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.IScreenShowService;
 import com.cg.omts.service.ScreenShowServiceImpl;
-
+import org.apache.log4j.Logger;
 
 @WebServlet("/DeleteScreenServlet")
 public class DeleteScreenController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	final static Logger LOGGER = Logger.getLogger(DeleteScreenController.class);  
  
  	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
  		IScreenShowService screenShowService = new ScreenShowServiceImpl();
@@ -50,21 +50,24 @@ public class DeleteScreenController extends HttpServlet {
 			if(screenShowService.isScreenIdExists(screenId)) {
 			boolean isDeleted = screenShowService.deleteScreen(screenId);
 			if(isDeleted) {
+				LOGGER.info("Screen deleted successfully");
 				message = "Successfully deleted screen with ID: "+screenId;
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("adminHomePage.jsp").forward(request, response);
 			} else {
+				LOGGER.info("Failed to delete Screen");
 				message = "Failed to delete screen with ID: "+screenId;
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("adminHomePage.jsp").forward(request, response);
 			}
 			} else {
+				LOGGER.info("Invalid Screen ID");
 				message = "Enter valid Screen ID";
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("adminHomePage.jsp").forward(request, response);
 			}
 		} catch (OMTSException e) {
-			
+			LOGGER.warn("Exception occurred");
 			e.printStackTrace();
 		}
 	}

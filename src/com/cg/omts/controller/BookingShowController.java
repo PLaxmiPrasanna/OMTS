@@ -19,9 +19,10 @@ import com.cg.omts.exceptions.OMTSException;
 import com.cg.omts.service.BookingServiceImpl;
 import com.cg.omts.service.IBookingService;
 
+import org.apache.log4j.Logger;
 @WebServlet("/BookingShowController")
 public class BookingShowController extends HttpServlet{
-
+	final static Logger LOGGER = Logger.getLogger(BookingShowController.class);
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -37,6 +38,7 @@ public class BookingShowController extends HttpServlet{
 			String showName = bookingService.getShowName(showId);
 			if(theatreId != -1 && screenId != -1) {
 				seat = bookingService.getSeatPrice(screenId);
+				LOGGER.info("Getting seat object");
 				
 			}
 			double totalPrice = noOfSeats * seat.getSeatPrice();
@@ -58,7 +60,9 @@ public class BookingShowController extends HttpServlet{
 			dispatcher = request.getRequestDispatcher("booking.jsp");
 			dispatcher.forward(request, response);
 		}catch(OMTSException e) {
+			LOGGER.warn("Exception occurred");
 			e.printStackTrace();
+			
 		}
 	}
 	@Override
