@@ -49,7 +49,7 @@ public class DeleteMovieController extends HttpServlet {
 				if(rowsDeleted > 0) {
 					LOGGER.info("Movie deleted successfully");
 					message = "Successfully deleted record with movie ID: "+movieId;
-					request.setAttribute("message", message);
+					request.setAttribute("successMessage", message);
 					request.getRequestDispatcher("adminHomePage.jsp").forward(request, response);
 				} else { 
 					LOGGER.info("Failed to delete movie");

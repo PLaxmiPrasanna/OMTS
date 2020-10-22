@@ -244,7 +244,7 @@ tr:hover {
 			<%
 				if (request.getParameter("message") != null) {
 			%>
-			<%=request.getParameter("message")%>
+			<center><h3 style="color:green;"><%=request.getParameter("message")%></h3></center>
 			<%
 				}
 			%>

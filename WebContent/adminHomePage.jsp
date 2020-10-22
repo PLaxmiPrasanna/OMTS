@@ -165,10 +165,16 @@ color:white;
 %>
 <%
 		String message = (String)request.getAttribute("message");
+		if(request.getAttribute("successMessage") != null){
+			%>
+			<center><h3 style="color:green;"><%=request.getAttribute("successMessage") %></h3></center>
+			<%
+		}
 		if(message != null) {
-			out.print("<html><body><h5 align = center;>");
-			out.print(message);
-			out.print("</h5></body></html>");
+		
+			%>
+			<center><h3 style="color:red;"><%=request.getAttribute("message") %></h3></center>
+			<%
 		}
 	%>
 <div class="admincontent">

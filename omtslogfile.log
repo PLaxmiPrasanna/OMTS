@@ -1,0 +1,18 @@
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.DeleteMovieController:Invalid movie iD
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.DeleteMovieController:Invalid movie iD
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.DeleteMovieController:Invalid movie iD
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.DeleteMovieController:Movie deleted successfully
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.DeleteMovieController:Invalid movie iD
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.DeleteMovieController:Movie deleted successfully
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-17-WARN -com.cg.omts.controller.AddTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.AddTheatreController:Couldn't insert theatre
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
+2020-10-22-http-nio-8079-exec-11-WARN -com.cg.omts.controller.AddTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.AddTheatreController:Couldn't insert theatre
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived

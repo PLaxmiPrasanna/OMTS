@@ -199,13 +199,9 @@ tr:hover {background-color:#d1cdd1}
       } 
 %>
 
-<h1>
-<center>
 <% if(request.getAttribute("message")!=null) { %>
-<%= request.getAttribute("message") %>
+<center><h3 style="color:green;"><%= request.getAttribute("message") %></h3></center>
 <%} %>
-</center>
-</h1>
 <h1>
 <center>List of Theatres</center> </h1>
 <br>

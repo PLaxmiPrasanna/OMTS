@@ -160,13 +160,13 @@ background-color: black;
          }
       } 
 %>
-<h1 style="color:red">
+<h3 style="color:red">
 <center>
 <% if(request.getAttribute("message")!=null) { %>
 <%=request.getAttribute("message") %>
 <%} %>
 </center>
-</h1>
+</h3>
 <br>
 <br>
 <h1><center> Enter Theatre Details to Register</center> </h1>
