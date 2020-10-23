@@ -75,45 +75,11 @@ public interface IBookingDao {
 	
 	Ticket getTicket(int ticketId) throws OMTSException;
 	
-//	public int deleteTicketFromUser(int ticketId) throws OMTSException;
-//
-//	public int getSeatsAvailable(int screenId) throws OMTSException;
-//	
-//	public Screen getScreen(int screenId) throws OMTSException;
-//	
-//	
-//	
-//	public Seat getSeatPrice(int screenId) throws OMTSException;//booking
-//	
-//	public List<Screen> getScreenByTheatreId(int theatreId) throws OMTSException;//booking
-//	
-//	public String getScreenName(int screenId) throws OMTSException;//booking
-//	
-//	public String getShowName(int showId) throws OMTSException;//booking
-//
-//	List<Show> getShowsByMovieAndTheatre(int screenId, int theatreId, int movieId) throws OMTSException;//booking
-//
-//	Booking getBookingDetails(int ticketId) throws OMTSException;//booking
-//	
-//	Booking getBookingById(int bookingId) throws OMTSException;//booking
-//	
-//	int getTransactionIdByBookingId(int bookingId) throws OMTSException;//booking
-//	
-//	int getTicketIdByBookingId(int bookingId) throws OMTSException;//booking
-//
-//	Ticket getTicket(int ticketId) throws OMTSException;//booking
-//
-//	//booking
-//
-//	Seat seatAvailability(int seatId) throws OMTSException;//booking
-//	
-//
-//	public int setSeatStatus(int seatId, String status) throws OMTSException;//booking
-//	
-//	public int deleteBookingDetails(int ticketId) throws OMTSException;//booking
-//	
+	public int deleteSeatByStatus() throws OMTSException;
+	
+	public List<Integer> getTicketWithoutPayment() throws OMTSException;
 
-//	
-//	public int addBooking(Booking booking, int ticketId, int transactionId) throws OMTSException;//booking
-//	
+	public int deleteTicketToUser(List<Integer> ticketIdList) throws OMTSException;
+	
+	public int deleteTicket(List<Integer> ticketIdList) throws OMTSException;
 }

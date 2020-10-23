@@ -105,9 +105,6 @@ th, td {
 	text-align: left;
 	border-bottom: 1px solid #ddd;
 }
-
-
-	
 	.selectclass {
 	width:250px;
 	height:35px;
@@ -193,7 +190,7 @@ th, td {
 	</form>
 	<div class="footer" style="font-size: 20px">
 <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-India Ltd.
+India Pvt Ltd.
 </div>
 </body>
 </html>

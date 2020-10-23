@@ -1,3 +1,7 @@
+<%@page import="com.cg.omts.service.BookingServiceImpl"%>
+<%@page import="com.cg.omts.service.IBookingService"%>
+<%@page import="java.util.HashSet"%>
+<%@page import="java.util.Set"%>
 <%@page import="com.cg.omts.service.MovieTheatreServiceImpl"%>
 <%@page import="com.cg.omts.dao.MovieTheatreDaoImpl"%>
 <%@page import="com.cg.omts.service.IMovieTheatreService"%>
@@ -88,6 +92,7 @@ table {
 th, td {
 	padding: 8px;
 	text-align: left;
+	font-size:18px;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -98,7 +103,7 @@ tr:hover {
 .selectclass {
 	width:250px;
 	height:35px;
-	margin-top:2%;
+	margin-top:-20%;
 	margin-left:70%;
 	font-size:15px;
 	background-color:#e3dddc;
@@ -143,8 +148,20 @@ tr:hover {
 		    
 	</div> 
 	
-	
-
+	<% if (session != null) {
+         if (session.getAttribute("username") != null) {
+            int id = (Integer)session.getAttribute("username");
+            %><h2><center> Welcome <%= session.getAttribute("username")%></center></h2> <%    
+         }
+      } 
+%>
+	<%
+		IBookingService bookingService = new BookingServiceImpl();
+		bookingService.deleteSeatByStatus();
+		List<Integer> ticketIdList = bookingService.getTicketWithoutPayment();
+		bookingService.deleteTicketToUser(ticketIdList);
+		bookingService.deleteTicket(ticketIdList);
+	%>
 	<div class="userhome" id="userhome">
 	<form action="/DisplayMoviesToUser" method="get" align="center">
 		<select name="city" id="city" onchange="selectCity()" class="selectclass" align = "center">
@@ -153,6 +170,7 @@ tr:hover {
 		<option value="Hyderabad" align="center">HYDERABAD</option>
 		<option value = "Warangal" align="center">WARANGAL</option>
 		<option value = "Nizambad" align="center">NIZAMBAD</option>
+		<option value = "Bhuvaneshwar" align="center">BHUVANESHWAR</option>
 		</select>
 		</br></br>
 	<table align="center" border=1>
@@ -161,9 +179,10 @@ tr:hover {
 	  		IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl();
 	  		
 			List<Movie> moviesList = movieTheatreService.getAllMovies();
+			
 			for(Movie movie : moviesList) {
-			String movieName = movie.getMovieName();
-			int movId = movie.getMovieId();
+				String movieName = movie.getMovieName();
+				int movId = movie.getMovieId();
 			%>
 	
 	<tr><td style="text-align:center"><%= movieName%></th><td><center><a href="MovieDetailsServlet?movieId=<%= movId%>" >View Movie Details</a></center></td></tr>
@@ -173,7 +192,7 @@ tr:hover {
 	</div>
 	<div class="footer" style="font-size: 20px">
 		<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 	</div> 
 </body>
 </html>

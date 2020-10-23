@@ -100,13 +100,12 @@ public class PaymentController extends HttpServlet{
 				req.setAttribute("theatreId", theatreId);
 				req.setAttribute("screenId", screenId);
 				req.setAttribute("showId", showId);
-				dispatcher = req.getRequestDispatcher("payment.jsp");
+				dispatcher = req.getRequestDispatcher("payment1.jsp");
 				dispatcher.forward(req, resp);
 			}
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
 			LOGGER.warn("Exception occured");
-			e.printStackTrace();
 		}		
 	}
 }

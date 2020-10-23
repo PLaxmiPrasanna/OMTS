@@ -34,7 +34,6 @@ public class DeleteScreenController extends HttpServlet {
 			request.getRequestDispatcher("deleteScreen.jsp").forward(request, response);
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		
 	}

@@ -138,12 +138,12 @@ a {
 	</div>
 	<div class="footer" style="font-size: 20px">
 		<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 	</div>
 	<%if(request.getAttribute("message") != null){ %>
 		<center><h3 style="color:green;"><%=request.getAttribute("message")	%></h3></center>
 	<%} %>
-<center><h1>BOOKING CONFIRMATION</h1></center>
+<center><h1>BOOKING CONFIRMED</h1></center>
 <center><h2>TICKET DETAILS</h2></center>
 
  <%

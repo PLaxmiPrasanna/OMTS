@@ -41,7 +41,6 @@ public class BookingController extends HttpServlet{
 			dispatcher.forward(request, response);
 		}catch(OMTSException e) {
 			LOGGER.warn("Exception occured");
-			e.printStackTrace();
 		}
 		
 	}

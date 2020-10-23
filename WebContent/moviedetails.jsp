@@ -83,18 +83,21 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 table {
 	background-color: #ffff1a;
 	border-collapse: collapse;
 	width: 40%;
 	height: 30%;
 	font-size:18px;
+	margin-top:20px;
 }
 
 th, td {
 	padding: 8px;
 	text-align: center;
 	border-bottom: 1px solid #ddd;
+	height:30%;
 }
 
 tr:hover {
@@ -143,10 +146,10 @@ tr:hover {
 		  	<img src="backbutton.png" alt="back button" style="width:20px;height:25px;border:0;">
 		    </a>
 	</div> 
-	<br><br><br><br>
 	<div class="display">
+	<center><h1>Movie Details</h1></center>
 	<table align="center" border=1>
-	<caption><h1>Movie Details</h1></caption>
+	
 	<tr><th>Movie Id</th><td><c:out value="${movie.movieId}" /></td></tr>
 	<tr><th>Movie Name</th><td><c:out value="${movie.movieName}"/></td></tr>
 	<tr><th>Movie Genre</th><td><c:out value="${movie.movieGenre}" /></td></tr>
@@ -162,7 +165,7 @@ tr:hover {
 	</div></center>
 	<div class="footer" style="font-size: 20px">
 		<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 	</div>
 </body>
 </html>

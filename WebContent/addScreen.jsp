@@ -166,8 +166,11 @@ else if(session.getAttribute("roleCode").equals("usr")){
 
 	<%
 		String message = (String)request.getAttribute("message");
-		if(message != null)
-			out.print(message);
+		if(message != null){
+	%>
+	<center><h3 style="color:red;"><%=request.getAttribute("message") %></h3></center>
+			
+	<%}
 	%>
 	</br></br></br>
 	<form method = "post" action = "AddScreenServlet" align = "center">
@@ -183,7 +186,7 @@ else if(session.getAttribute("roleCode").equals("usr")){
 		<button type = "submit" class="btn"> Submit </button>
 	</form>
 	<div class="footer" style="font-size: 20px">
-<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini India Ltd.
+<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini India Pvt Ltd.
 </div>
 </body>
 </html>

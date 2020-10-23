@@ -7,8 +7,17 @@
 <title>Registration</title>
 <link rel ="stylesheet" href="style.css">
 <link rel ="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+.bgpic {
+	background-image: url("background.jpg");
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
 </head>
-<body>
+<body class="bgpic">
 <%if(request.getAttribute("errorMessage") != null){ %>
 	<center><h3 style="color:red;"><%=request.getAttribute("errorMessage")%></h3></center>
 <%} %>
@@ -19,8 +28,7 @@
 				<div class="col-md-5 register-left">
 					<img src="icon.png">
 					<h3 style="color:blue;">JOIN US</h3>
-					<p style="color:blue;">Be a part of T-CKT family to know more</p>
-					<button type="button" class="btn btn-primary">About Us</button>
+					
 				</div>
 
 				<div class="col-md-7 register-right">
@@ -41,11 +49,11 @@
 							
 						</div>
 						<div class="form-group">
-							<input type="date" class="form-control" placeholder="Date" name="custdob" required>
+							<input type="date" class="form-control" placeholder="Date of Birth" name="custdob" required>
 							
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Contact Number" name="contact" required>
+							<input type="text" class="form-control" placeholder="Contact Number" name="contact" pattern="^[0-9]{10}" title = "Phone number should be of 10 digits" required>
 							
 						</div>
 						

@@ -12,6 +12,7 @@ import com.cg.omts.dto.Booking;
 import com.cg.omts.dto.Movie;
 import com.cg.omts.dto.Screen;
 import com.cg.omts.dto.Seat;
+import com.cg.omts.dto.Seat.SeatStatus;
 import com.cg.omts.dto.Show;
 import com.cg.omts.dto.Ticket;
 import com.cg.omts.dto.Ticket.TicketStatus;
@@ -906,4 +907,99 @@ public class BookingDaoImpl implements IBookingDao {
 		
 	}
 
+	@Override
+	public int deleteSeatByStatus() throws OMTSException {
+		// TODO Auto-generated method stub
+		int isDeleted = 0;
+		
+		try {
+			connection = DBConnection.getConnection();
+			prepareStatement = connection.prepareStatement(IBookingQueryConstants.DELETE_SEAT_BY_STATUS);
+			
+			prepareStatement.setString(1, "BLOCKED");  
+			isDeleted = prepareStatement.executeUpdate();
+		}catch(SQLException e){ 
+			throw new OMTSException("problem while creating PS object"+e.getMessage());
+		}finally {
+			try {
+				connection.close();
+			}catch(SQLException e) {
+				throw new OMTSException("problem while closing Database");
+			}
+		}
+		return isDeleted;
+	}
+
+	@Override
+	public List<Integer> getTicketWithoutPayment() throws OMTSException {
+		// TODO Auto-generated method stub
+		List<Integer> ticketIdList = new ArrayList<>();
+
+		try {
+			connection = DBConnection.getConnection();
+			prepareStatement = connection.prepareStatement(IBookingQueryConstants.GET_TICKET_BY_STATUS);
+			prepareStatement.setString(1, "INPROCESS");
+			resultSet = prepareStatement.executeQuery();
+			while (resultSet.next()) {
+				ticketIdList.add(resultSet.getInt(1));
+			}
+		} catch (SQLException e) {
+			throw new OMTSException("problem occured while creating PS object");
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new OMTSException("problem occured while closing connection");
+			}
+		}
+		return ticketIdList;
+	}
+
+	@Override
+	public int deleteTicketToUser(List<Integer> ticketIdList) throws OMTSException {
+		// TODO Auto-generated method stub
+		int isDeleted = 0;
+		
+		try {
+			connection = DBConnection.getConnection();
+			prepareStatement = connection.prepareStatement(IBookingQueryConstants.DELETE_TICKET_IN_USER);
+			for (Integer ticketId : ticketIdList) {
+				prepareStatement.setInt(1, ticketId);
+				isDeleted = prepareStatement.executeUpdate();
+			}
+		}catch(SQLException e){ 
+			throw new OMTSException("problem while creating PS object"+e.getMessage());
+		}finally {
+			try {
+				connection.close();
+			}catch(SQLException e) {
+				throw new OMTSException("problem while closing Database");
+			}
+		}
+		return isDeleted;
+	}
+
+	@Override
+	public int deleteTicket(List<Integer> ticketIdList) throws OMTSException {
+		// TODO Auto-generated method stub
+		int isDeleted = 0;
+		
+		try {
+			connection = DBConnection.getConnection();
+			prepareStatement = connection.prepareStatement(IBookingQueryConstants.DELETE_TICKET_BY_ID);
+			for (Integer ticketId : ticketIdList) {
+				prepareStatement.setInt(1, ticketId);
+				isDeleted = prepareStatement.executeUpdate();
+			}
+		}catch(SQLException e){ 
+			throw new OMTSException("problem while creating PS object"+e.getMessage());
+		}finally {
+			try {
+				connection.close();
+			}catch(SQLException e) {
+				throw new OMTSException("problem while closing Database");
+			}
+		}
+		return isDeleted;
+	}
 }

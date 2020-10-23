@@ -161,7 +161,11 @@ background-color: black;
 <br>
 <center><h1>Enter Details to Register Show</h1>
 <%if(request.getAttribute("message")!= null)  { %>
-<h1><%= request.getAttribute("message")%></h1>
+<h3 style="color:red;"><%= request.getAttribute("message")%></h1>
+<%}
+	if(request.getAttribute("successMessage") != null){
+%>
+<h3 style="color:green;"><%=request.getAttribute("successMessage") %></h3>
 <%} %>
 </center>
 <br>
@@ -250,7 +254,7 @@ function myFunction() {
 </script>
 <div class="footer">
   <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 </div>
 </body>
 </html>

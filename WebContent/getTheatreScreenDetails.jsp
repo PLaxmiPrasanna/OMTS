@@ -48,8 +48,9 @@ body {
 	background-image: url("background.jpg");
 	height: 100vh;
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-size: cover;
+	
 }
 
 .header {
@@ -194,7 +195,7 @@ th, td {
 	</form>
 	<div class="footer" style="font-size: 20px">
 		<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 	</div>
 </body>
 </html>

@@ -8,4 +8,5 @@ public interface ICustomerDao {
 	public String validateLogin(Customer customer) throws OMTSException;
 	
 	public int register(Customer customer) throws OMTSException;
+	
 }

@@ -104,19 +104,18 @@ a {
 	background: rgba(255, 255, 255, .1);
 	font-size: 15px;
 }
-
 .footer {
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	color: white;
-	background-color: #a89e8a;
+	background-color:#291f04;
 	margin-top: 100%;
 	width: 100%;
-	height: 5%;
+	height: 6%;
 	font-size: 200%;
 	text-align: center;
-	opacity: 0.7;
+	opacity: 1;
 }
 table {
 	background-color: #ffff1a;
@@ -209,12 +208,12 @@ tr:hover {
 			<%
 			}%>
 			<%if(request.getAttribute("message") != null){ %>
-		<center><h3><%=request.getAttribute("message")%></h3></center>
+		<center><h3 style="color:green;"><%=request.getAttribute("message")%></h3></center>
 	<%} %>
 	</table>
 	<div class="footer" style="font-size: 20px">
 		<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
-	</div>
+		India Pvt Ltd.
+	</div> 
 </body>
 </html>

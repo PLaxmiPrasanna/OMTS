@@ -53,7 +53,7 @@
 	background-image: url("background.jpg");
 	height: 100vh;
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-size: cover;
 }
 .header {
@@ -193,11 +193,13 @@ th, td {
 				</tr>
 			</c:forEach>
 		</table>
+
 	</c:if>
-	</form>
+	</form>	<br><br>
+	<br><br><br><br>
 	<div class="footer" style="font-size: 20px">
 <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-India Ltd.
+India Pvt Ltd.
 </div>
 </body>
 </html>

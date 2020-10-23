@@ -257,7 +257,7 @@ table.rightTable {
 	
 	</form>
 	<div class="footer" style="font-size: 20px">
-<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini India Ltd.
+<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini India Pvt Ltd.
 </div>
 </body>
 </html>

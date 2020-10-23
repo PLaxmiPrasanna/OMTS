@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.cg.omts.dto.Screen;
 import com.cg.omts.dto.Seat;
@@ -28,6 +29,7 @@ public class BookingShowController extends HttpServlet{
 		// TODO Auto-generated method stub
 		RequestDispatcher dispatcher = null;
 		IBookingService bookingService = new BookingServiceImpl();
+		HttpSession session = request.getSession();
 		Seat seat = null;
 		try {
 			int theatreId = Integer.parseInt(request.getParameter("theatreId"));
@@ -56,12 +58,12 @@ public class BookingShowController extends HttpServlet{
 			request.setAttribute("noOfSeats", noOfSeats);
 			request.setAttribute("totalPrice", totalPrice);
 			request.setAttribute("showName", showName);
+			session.setAttribute("totalSeatsAvailable", totalSeatsAvailable);
 			request.setAttribute("totalSeatsAvailable", totalSeatsAvailable);
 			dispatcher = request.getRequestDispatcher("booking.jsp");
 			dispatcher.forward(request, response);
 		}catch(OMTSException e) {
 			LOGGER.warn("Exception occurred");
-			e.printStackTrace();
 			
 		}
 	}

@@ -171,5 +171,25 @@ public class BookingServiceImpl implements IBookingService{
 		// TODO Auto-generated method stub
 		return bookingDao.getTicket(ticketId);
 	}
+	@Override
+	public int deleteSeatByStatus() throws OMTSException {
+		// TODO Auto-generated method stub
+		return bookingDao.deleteSeatByStatus();
+	}
+	@Override
+	public List<Integer> getTicketWithoutPayment() throws OMTSException {
+		// TODO Auto-generated method stub
+		return bookingDao.getTicketWithoutPayment();
+	}
+	@Override
+	public int deleteTicketToUser(List<Integer> ticketIdList) throws OMTSException {
+		// TODO Auto-generated method stub
+		return bookingDao.deleteTicketToUser(ticketIdList);
+	}
+	@Override
+	public int deleteTicket(List<Integer> ticketIdList) throws OMTSException {
+		// TODO Auto-generated method stub
+		return bookingDao.deleteTicket(ticketIdList);
+	}
 
 }

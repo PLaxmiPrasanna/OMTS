@@ -32,6 +32,7 @@ public class DeleteMovieController extends HttpServlet {
 			session.setAttribute("displayDetails", displayDetails);
 			request.getRequestDispatcher("deleteMovies.jsp").forward(request, response);
 		} catch (OMTSException e) {
+			
 			e.printStackTrace();
 		}
 		
@@ -66,7 +67,7 @@ public class DeleteMovieController extends HttpServlet {
 		} catch (OMTSException e1) {
 			// TODO Auto-generated catch block
 			LOGGER.warn("Exception occured");
-			e1.printStackTrace();
+			response.sendRedirect("adminError.jsp");
 		}
 				
 	}

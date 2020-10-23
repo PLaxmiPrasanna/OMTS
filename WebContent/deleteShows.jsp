@@ -198,7 +198,7 @@ background-color: black;
 		    </a>
   <ul>
   <div class="header-right">
-    <li><a class="active" href="#home">Home</a></li>
+    
 				<% if (session.getAttribute("username") != null) {
 			            int id = (Integer)session.getAttribute("username");
 			            System.out.println("session id "+ id); 
@@ -226,11 +226,11 @@ background-color: black;
 </form>
 <a href="deleteShows.jsp" class="submit"> View ALL</a>
 <% if (request.getParameter("message")!=null) {%>
-<h3><%=request.getParameter("message") %></h3>
+<center><h3 style = "color:green;"><%=request.getParameter("message") %></h3></center>
 <%} %>
 
 <% if (request.getAttribute("errorMessage")!=null) {%>
-<h2><%=request.getAttribute("errorMessage") %></h2>
+<center><h3 style = "color:red;"><%=request.getAttribute("errorMessage") %></h3></center>
 <%} %>
 <br>
 </center>
@@ -238,7 +238,7 @@ background-color: black;
 <%
 List<Show> showListSearch = (List<Show>)request.getAttribute("searchShowList");
 if(request.getAttribute("searchShowList")!=null) {%>
-<table border=1 width=50% height=50%>
+<table border=1 width=50%>
 <thead>
 <tr>
 <td>
@@ -398,7 +398,7 @@ for(Show show : showList) {
 <br>
 <div class="footer">
   <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 </div>
 </body>
 </html>

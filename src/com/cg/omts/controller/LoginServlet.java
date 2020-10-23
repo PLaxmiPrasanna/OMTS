@@ -56,10 +56,10 @@ public class LoginServlet extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		        rd.forward(request, response);
 			}
-		} catch (OMTSException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			LOGGER.warn("Exception occured");
-			e.printStackTrace();
+			response.sendRedirect("error.jsp");
 		}
 		
 	}

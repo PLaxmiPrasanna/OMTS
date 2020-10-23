@@ -16,3 +16,851 @@
 2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
 2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
 2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-29-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.DeleteScreenController:Invalid Screen ID
+2020-10-22-http-nio-8079-exec-35-INFO -com.cg.omts.controller.AddScreenController:In AddScreenController
+2020-10-22-http-nio-8079-exec-33-INFO -com.cg.omts.controller.AddScreenController:In AddScreenController
+2020-10-22-http-nio-8079-exec-37-INFO -com.cg.omts.controller.AddScreenController:In AddScreenController
+2020-10-22-http-nio-8079-exec-35-INFO -com.cg.omts.controller.AddScreenController:In AddScreenController
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-45-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-46-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected all cities option
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.AddMovieController:Adding new movie
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.AddMovieController:New Movie added
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie added successfully
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.AddScreenController:Screen already exists
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.AddScreenController:In AddScreenController
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GetTheatreScreenDetailsController:List of theatres generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GetTheatreScreenDetailsController:Seat price generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GetTheatreScreenDetailsController:Screen details generated
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Theatre ID in SelectTheatreScreenIdDetails Controller
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:screenid and theatreid are added to admin
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Screen details successfully added
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.AddShowController:all conditions true
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.AddShowController:Added Show Successfully
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.DeleteScreenController:Screen deleted successfully
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.DeleteMovieController:Movie deleted successfully
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.MovieDetailsController:Customer details stored
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.MovieDetailsController:Could not register customer
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Customer details stored
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Customer added successfully
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-22-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-22-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.GenerateIds:First Ticket
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-22-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-34-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-32-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-31-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-36-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-36-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-36-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-36-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-36-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-36-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-45-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-46-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-41-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-50-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-42-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-42-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-42-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-42-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-42-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-42-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.GenerateIds:First transaction
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-49-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-45-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-52-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-50-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-50-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-50-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-44-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-52-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-54-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-51-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-53-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-54-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-54-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-55-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-60-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-60-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-60-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-52-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-55-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-58-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-55-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-59-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-58-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-56-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-51-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-57-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie already exists
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie already exists
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie already exists
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie already exists
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie added successfully
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie added successfully
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.MovieDetailsController:Customer details stored
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.MovieDetailsController:Customer added successfully
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.DisplayMoviesToUserServlet:Selected a city from above cities
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-27-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-22-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.PaymentController:Invalid Credentials
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-22-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-24-WARN -com.cg.omts.controller.AddTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.AddTheatreController:Couldn't insert theatre
+2020-10-22-http-nio-8079-exec-22-INFO -com.cg.omts.controller.AddMovieController:Movie already exists.
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie already exists
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-27-INFO -com.cg.omts.controller.AddMovieToTheatre:Movie already exists
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-27-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-23-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-27-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-2-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-10-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-4-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-5-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-8-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-1-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-3-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-7-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-9-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.GenerateIds:Ticket id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.GenerateIds:Seat found
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.GenerateIds:Seat id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.MovieDetailsController:Ticket Id generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.MovieDetailsController:Selected seats list generated
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.MovieDetailsController:Ticket id status set to InProcess
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.PaymentController:Validated credentials
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.PaymentController:Transaction id generated
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.PaymentController:Payment made
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-19-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.MovieDetailsController:Getting movie object
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.BookingScreenController:Getting list of screen and shows
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.BookingShowController:Getting seat object
+2020-10-22-http-nio-8079-exec-13-WARN -com.cg.omts.controller.LoginServlet:Exception occured
+2020-10-22-http-nio-8079-exec-26-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-18-WARN -com.cg.omts.controller.DeleteTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-29-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-20-WARN -com.cg.omts.controller.DeleteTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-27-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-30-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-32-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-32-WARN -com.cg.omts.controller.DeleteTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-29-WARN -com.cg.omts.controller.DeleteMovieController:Exception occured
+2020-10-22-http-nio-8079-exec-25-WARN -com.cg.omts.controller.DeleteScreenController:Exception occurred
+2020-10-22-http-nio-8079-exec-31-WARN -com.cg.omts.controller.DeleteScreenController:Exception occurred
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-25-WARN -com.cg.omts.controller.DeleteTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-31-WARN -com.cg.omts.controller.DeleteScreenController:Exception occurred
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-25-WARN -com.cg.omts.controller.DeleteTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-28-WARN -com.cg.omts.controller.AddTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-28-INFO -com.cg.omts.controller.AddTheatreController:Couldn't insert theatre
+2020-10-22-http-nio-8079-exec-25-WARN -com.cg.omts.controller.AddTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.AddTheatreController:Couldn't insert theatre
+2020-10-22-http-nio-8079-exec-27-WARN -com.cg.omts.controller.AddTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-2-WARN -com.cg.omts.controller.DeleteMovieController:Exception occured
+2020-10-22-http-nio-8079-exec-6-INFO -com.cg.omts.controller.DeleteMovieController:Movie deleted successfully
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.AddScreenController:In AddScreenController
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.GetTheatreScreenDetailsController:List of theatres generated
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.GetTheatreScreenDetailsController:Seat price generated
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.GetTheatreScreenDetailsController:Screen details generated
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Theatre ID in SelectTheatreScreenIdDetails Controller
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:screenid and theatreid are added to admin
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.MovieDetailsController:Screen details successfully added
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-14-WARN -com.cg.omts.controller.DeleteTheatreController:Exception occured
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-16-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-20-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.CancelBookingController:Cancelling and refund successful
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-17-INFO -com.cg.omts.controller.DeleteTheatreController:Theatre is deleted
+2020-10-22-http-nio-8079-exec-13-INFO -com.cg.omts.controller.DeleteMovieController:Movie deleted successfully
+2020-10-22-http-nio-8079-exec-14-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-15-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of theatres derived
+2020-10-22-http-nio-8079-exec-18-INFO -com.cg.omts.controller.GetTheatreDetailsController:List of movies derived
+2020-10-22-http-nio-8079-exec-12-INFO -com.cg.omts.controller.LoginServlet:Logged in as User
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:Getting ticketid list by userid
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting transaction id list by ticketid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting booking id list by transaction list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting names of theatre from theatre id list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting movieid list by theatre id list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting movies list by movieid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting show names list by theatreid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:getting screen name list by theatreid list
+2020-10-22-http-nio-8079-exec-11-INFO -com.cg.omts.controller.ViewBookingController:All the details successfully set
+2020-10-22-http-nio-8079-exec-21-INFO -com.cg.omts.controller.LoginServlet:Logged in as Admin
+2020-10-22-http-nio-8079-exec-24-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
+2020-10-22-http-nio-8079-exec-25-INFO -com.cg.omts.controller.AddTheatreController:Theatre inserted
+2020-10-23-http-nio-8079-exec-45-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-23-http-nio-8079-exec-47-INFO -com.cg.omts.controller.LoginServlet:Invalid Credentials
+2020-10-23-http-nio-8079-exec-45-INFO -com.cg.omts.controller.LoginServlet:Logged in as User

@@ -176,6 +176,7 @@ tr:hover {
 				<option value="Hyderabad" align="center">HYDERABAD</option>
 				<option value="Warangal" align="center">WARANGAL</option>
 				<option value="Nizambad" align="center">NIZAMBAD</option>
+				<option value="Bhuvaneshwar" align="center">BHUVANESHWAR</option>
 			</select>
 			<table align="center" border=1>
 				<h3 align="center">
@@ -224,7 +225,7 @@ tr:hover {
 	</div>
 	<div class="footer" style="font-size: 20px">
 		<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 	</div>
 </body>
 </html>

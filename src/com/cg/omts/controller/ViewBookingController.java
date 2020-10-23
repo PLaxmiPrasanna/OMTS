@@ -87,7 +87,6 @@ public class ViewBookingController extends HttpServlet{
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
 			LOGGER.warn("Exception occured");
-			e.printStackTrace();
 		}
 		
 		

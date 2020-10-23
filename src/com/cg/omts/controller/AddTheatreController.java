@@ -45,21 +45,22 @@ public class AddTheatreController extends HttpServlet {
 		IMovieTheatreService movieTheatreService = new MovieTheatreServiceImpl();
 		try {
 			rowsInserted = movieTheatreService.addTheatre(theatre);
+			if(rowsInserted!=0) {
+				LOGGER.info("Theatre inserted");
+				request.setAttribute("message", "Successfully registered Theatre with theatreId :"+theatreId);
+				RequestDispatcher requestDispatcher = request.getRequestDispatcher("displayTheatres.jsp");
+				requestDispatcher.forward(request, response);
+			}else {
+				LOGGER.info("Couldn't insert theatre");
+				request.setAttribute("message", "Could not insert the Threatre, the theatreId :"+theatreId+" is already existing");
+				RequestDispatcher requestDispatcher = request.getRequestDispatcher("addTheatre.jsp");
+				requestDispatcher.forward(request, response);
+			}
 		} catch (OMTSException e) {
 			LOGGER.warn("Exception occured");
-			e.printStackTrace();
+			
 		}
-		if(rowsInserted!=0) {
-			LOGGER.info("Theatre inserted");
-			request.setAttribute("message", "Successfully registered Theatre with theatreId :"+theatreId);
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("displayTheatres.jsp");
-			requestDispatcher.forward(request, response);
-		}else {
-			LOGGER.info("Couldn't insert theatre");
-			request.setAttribute("message", "Could not insert the Threatre, the theatreId :"+theatreId+" is already existing");
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("addTheatre.jsp");
-			requestDispatcher.forward(request, response);
-		}
+		
 	}
 
 }

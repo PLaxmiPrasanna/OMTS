@@ -8,8 +8,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +16,50 @@
 <title>Booking</title>
 
  <style>
+h1{
+	margin-top:-80px;
+}
+ select { 
+                appearance: none; 
+                outline: 0;  
+                background-image: none; 
+                width: 50%; 
+                height: 100%; 
+                color: black; 
+                cursor: pointer; 
+                border:1px solid black; 
+                border-radius:3px; 
+            } 
+            .select { 
+                position: relative; 
+                display: block; 
+                width: 15em; 
+                height: 2em; 
+                line-height: 3; 
+                overflow: hidden; 
+                border-radius: .25em; 
+                padding-bottom:10px; 
+                  
+            } 
+table {
+	/*background-color: #ffff1a;*/
+	border-collapse: collapse;
+	width: 50%;
+	height: 50%;
+	margin-left:400px;
+	margin-top:0px;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	font-size:18px;
+	font-weight:bold;
+	height:25px;
+}
+input,select{
+	font-size:18px;
+}
 
 .header a {
 	float:right;
@@ -111,6 +154,9 @@ body {
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
 		rgba(0, 0, 0, 0.19);
 }
+table{
+	margin-top:0px;
+}
 
 </style>
  
@@ -166,10 +212,11 @@ body {
 	<br><br><br><br><br>
 <center>
 	<form action ="BookingController" method = "post" id = "theatreSelection" name = "bookingForm">
+		<h1>Ticket Booking</h1>
 		<table align="center">
-		<caption><h1>Ticket Booking</h1></caption><br>
-			<tr>
-				<td><label>Select Theatre </label></td>
+		<caption></caption>
+			<tr >
+				<td>Select Theatre</td><br>
 				<td>:</td>
 				<td><select name = "theatreId" onchange = "document.bookingForm.submit();" id = "selectedTheatre">
 						<option value="-1" selected disabled>Select Theatre</option>
@@ -193,7 +240,7 @@ body {
 			</tr>
 			
 			<tr>
-				<td><label>Select screen </label></td><td>:</td>
+				<td>Select screen</td><td>:</td>
 				<td><select name = "screenId" onchange = "changeActionForScreen();" id = "selectedScreen">
 						<option value="-1"  selected disabled>Select Screen</option>
 						<%
@@ -230,7 +277,7 @@ body {
 				</td>
 			</tr>
 			<tr>
-				<td><label>Select Show </label></td><td>:</td>
+				<td>Select Show</td><td>:</td>
 				<td><select name = "showId" onchange = "changeActionForShow();" id = "selectedShow">
 						<option value="-1" selected disabled>Select Show</option>
 						<%
@@ -261,18 +308,34 @@ body {
 				</td>
 			</tr>
 			<tr>
-				<td><label>Enter Number of seats</label></td><td>:</td>
-				<td>
-					<input type ="number" name = "noOfSeats" min = "1" max = "10" onkeyup=imposeMinMax(this) value="1" required>
+				<td>Enter Number of seats</td><td>:</td>
+				<td><% int totalSeatsAvailable = 0; 
+				if(session.getAttribute("totalSeatsAvailable") != null) {
+					totalSeatsAvailable = (Integer)session.getAttribute("totalSeatsAvailable");
+		         }
+					if(totalSeatsAvailable > 10){
+				%>
+					<input type ="number" name = "noOfSeats" min = "1"  max = "10" onkeyup=imposeMinMax(this) value="1" required>
+				<%} else if(totalSeatsAvailable > 0){ %>
+						<input type ="number" name = "noOfSeats" min = "1"  max =<%=totalSeatsAvailable %> onkeyup=imposeMinMax(this) value="1" required>
+				<%} else{
+					%>
+					<input type ="number" name = "noOfSeats" min = "0"  max =<%=totalSeatsAvailable %> onkeyup=imposeMinMax(this) value="1" required>
+				
+				<%}%>
 				</td>
 			</tr>
 			<tr>
 				
 				<td></td>
 				<td></td>
-				<td>
-					
-					<label>****Number of seats available : </label> <%=request.getAttribute("totalSeatsAvailable") %>
+		<%
+			if(totalSeatsAvailable > 0){         
+         %>
+							<td><label>****Number of seats available : </label> <%=request.getAttribute("totalSeatsAvailable") %></td>
+				<%} else{%>
+							<td><label>****Number of seats available : 0(House Full)</label></td>
+				<%} %>
 				</td>
 			</tr>
 			<tr>
@@ -285,8 +348,8 @@ body {
 				</td>
 			</tr>
 			<tr>
-				<td><label>Cost </label></td><td>:</td>
-				<td><input type = "text" value=<%=request.getAttribute("price") %> name = "seatPrice" id = "selectedScreenSeatPrice" readonly>
+				<td>Cost</td><td>:</td>
+				<td><input type = "text" value=<%=request.getAttribute("price") %> name = "seatPrice" id = "selectedScreenSeatPrice" readonly style="width:80px;">
 				</td>
 			</tr>
 			<!-- <tr>
@@ -329,8 +392,10 @@ body {
 		</Script>
 		
 		
-	</form><br><br><br>
-	<% if((request.getAttribute("theatreId") != null) && (request.getAttribute("screenId") != null) && (request.getAttribute("showId") != null)){ %>
+	</form><br><br>
+	<%
+	
+	if((request.getAttribute("theatreId") != null) && (request.getAttribute("screenId") != null) && (request.getAttribute("showId") != null) && (totalSeatsAvailable > 0)){ %>
 			<input type="button" id="myBtn" value="Proceed to Pay" onclick="proceedToPay()" class="btn">
 	<%}else{ %>		
 			<input type="button" id="myBtn" value="Proceed to Pay" disabled class="btn">
@@ -339,7 +404,7 @@ body {
 	</center>
 	<div class="footer" style="font-size: 20px">
 		<span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 	</div> 
 </body>
 </html>

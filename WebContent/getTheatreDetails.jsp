@@ -167,27 +167,30 @@ th, td {
 	<%
 		String message = (String)request.getAttribute("message");
 		if(message != null) {
-			out.print("<html><body><h5 align = center;>");
-			out.print(message);
-			out.print("</h5></body></html>");
-		}
-			
-	%></br></br></br></br></br></br></br>
+			%>
+			<center><h3 style="color:red;"><%=request.getAttribute("message") %></h3></center>
+	<%
+			}if(request.getAttribute("successMessage") != null){
+	%><center><h3 style="color:green;"><%=request.getAttribute("successMessage") %></h3></center>
+	<%
+			}
+	%>
+	</br></br></br></br></br></br></br>
 	<form method = "post" action = "GetTheatreDetails" align = "center">
 	
 	Select Theatre City : 
 		<select name = "theatreCity">
 			<option value = "Hyderabad">Hyderabad</option>
 			<option value = "Warangal">Warangal</option>
-			<option value = "Adilabad">Adilabad</option>
-			<option value = "Nizamabad">Nizamabad</option>
-			<option value = "Khammam">Khammam</option>
+		
+			<option value = "Nizambad">Nizambad</option>
+			<option value = "Bhuvaneshwar" align="center">Bhuvaneshwar</option>
 		</select>
 		<button type = "submit" class="btn"> Submit </button></br>
 	</form>
 		<div class="footer" style="font-size: 20px">
 <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-India Ltd.
+India Pvt Ltd.
 </div>
 	</body>
 </html>

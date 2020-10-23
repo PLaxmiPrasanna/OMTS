@@ -39,7 +39,7 @@ public class CustomerDaoImpl implements ICustomerDao{
 		} finally {
 			try {
 				connection.close();
-				prepareStatement.close();
+			
 			} catch (SQLException e) {
 				System.out.println("Failed to close the database connection" +e);
 			}

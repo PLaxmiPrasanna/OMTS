@@ -202,7 +202,7 @@ color:white;
 </div>
 <div class="footer">
   <span style="font-size: 15px">&#9400;</span> Copyrights Capgemini
-		India Ltd.
+		India Pvt Ltd.
 </div>
 
 </body>

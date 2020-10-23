@@ -60,12 +60,11 @@ public class ProceedToPayController extends HttpServlet {
 			request.setAttribute("screenId", screenId);
 			request.setAttribute("showId", showId);
 			request.setAttribute("totalPrice", price*noOfSeats);
-			dispatcher = request.getRequestDispatcher("payment.jsp");
+			dispatcher = request.getRequestDispatcher("payment1.jsp");
 			dispatcher.forward(request, response);
 		} catch (OMTSException e) {
 			// TODO Auto-generated catch block
 			LOGGER.warn("Exception Occured");
-			e.printStackTrace();
 		}
 	}
 

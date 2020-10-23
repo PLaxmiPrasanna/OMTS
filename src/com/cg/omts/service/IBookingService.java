@@ -20,19 +20,9 @@ public interface IBookingService {
 	 * @param ticketId
 	 * @param ticket
 	 * @return int
-	 * @throws OMTSException
+	 * @Exception OMTSException
 	 */
 	public int generateTicket(Ticket ticket) throws OMTSException;
-	
-	
-	public List<Integer> getTicketIdsByUser(int userId) throws OMTSException;
-	
-	
-	public List<Ticket> getTicketByIDS(List<Integer> ticketIdList) throws OMTSException;
-	
-	public List<Transaction> getTransactionByTicket(List<Integer> ticketIdList) throws OMTSException;
-	
-	public List<Booking> getBookingByUser(List<Transaction> transactionId) throws OMTSException;
 	
 	/*******************************
 	 * @description Method to get Theatre Names
@@ -42,18 +32,19 @@ public interface IBookingService {
 	 * @return List<String>
 	 * @throws OMTSException
 	 */
+	
 	public List<String> getTheatreNames(List<Integer> theatreIdList) throws OMTSException;
 	
-	public List<Integer> getMoviesByTheatre(List<Integer> theatreIdList) throws OMTSException;
-	
-	public List<Movie> getMoviesById(List<Integer> movieIdList) throws OMTSException;
-	
-	public List<String> getShowNamesByTheatre(List<Integer> theatreIdList) throws OMTSException;
-	
-	public List<String> getScreenNamesByTheatre(List<Integer> theatreIdList) throws OMTSException;
-	
-	public int assignTicketToUser(int ticketId, int userId) throws OMTSException;
-	
+	/*****
+	 * @description Method to return seat price
+	 * @author Supriya M
+	 * 
+	 * @param seatId
+	 * @return Seat
+	 * @throws OMTSException
+	 */
+	public Seat getSeatPrice(int screenId) throws OMTSException;
+
 	/*******************************
 	 * @description Method to allocate seat
 	 * @author Laxmi Prasanna Pujari
@@ -76,8 +67,6 @@ public interface IBookingService {
 	 * @throws OMTSException
 	 */
 	public int assignSeatsToTickets(int ticketId, List<Integer> seatsList) throws OMTSException;
-	
-	public int setTicketStatus(int ticketId, String status) throws OMTSException;
 	
 	/*******
 	 @Description : To validate payment
@@ -111,8 +100,6 @@ public interface IBookingService {
 	 * @throws OMTSException
 	 */
 	public int addTransaction(Transaction transaction, int ticketId) throws OMTSException;
-	
-	public int makePayment(int accountNo, int currentBalance, int totalCost) throws OMTSException;
 	
 	/*******************************
 	 * @description Method to add booking
@@ -160,12 +147,6 @@ public interface IBookingService {
 
 	public Movie getMovieDetails(int movieId) throws OMTSException;
 	
-	public String getTheatreName(int theatreId) throws OMTSException;
-	
-	public String getScreenName(int screenId) throws OMTSException;
-	
-	public String getShowName(int showId) throws OMTSException;
-	
 	/*****
 	 * @description Method to return screen details
 	 * @author Supriya M
@@ -188,20 +169,46 @@ public interface IBookingService {
 	 */
 	public List<Show> getShowsByMovieAndTheatre(int screenId, int theatreId, int movieId) throws OMTSException;
 	
-	/*****
-	 * @description Method to return seat price
-	 * @author Supriya M
-	 * 
-	 * @param seatId
-	 * @return Seat
-	 * @throws OMTSException
-	 */
-	public Seat getSeatPrice(int screenId) throws OMTSException;
-	
 	public int getSeatsAvailable(int screenId) throws OMTSException;
 	
 	public Screen getScreen(int screenId) throws OMTSException;
 	
 	Ticket getTicket(int ticketId) throws OMTSException;
+	
+	public List<Integer> getTicketIdsByUser(int userId) throws OMTSException;
+	
+	public List<Ticket> getTicketByIDS(List<Integer> ticketIdList) throws OMTSException;
+	
+	public List<Transaction> getTransactionByTicket(List<Integer> ticketIdList) throws OMTSException;
+	
+	public List<Booking> getBookingByUser(List<Transaction> transactionId) throws OMTSException;
+	
+	public String getTheatreName(int theatreId) throws OMTSException;
+	
+	public String getScreenName(int screenId) throws OMTSException;
+	
+	public String getShowName(int showId) throws OMTSException;
+	
+	public List<Integer> getMoviesByTheatre(List<Integer> theatreIdList) throws OMTSException;
+	
+	public List<Movie> getMoviesById(List<Integer> movieIdList) throws OMTSException;
+	
+	public List<String> getShowNamesByTheatre(List<Integer> theatreIdList) throws OMTSException;
+	
+	public List<String> getScreenNamesByTheatre(List<Integer> theatreIdList) throws OMTSException;
+	
+	public int assignTicketToUser(int ticketId, int userId) throws OMTSException;
+	
+	public int setTicketStatus(int ticketId, String status) throws OMTSException;
+	
+	public int makePayment(int accountNo, int currentBalance, int totalCost) throws OMTSException;
+	
+	public int deleteSeatByStatus() throws OMTSException;
+	
+	public List<Integer> getTicketWithoutPayment() throws OMTSException;
+
+	public int deleteTicketToUser(List<Integer> ticketIdList) throws OMTSException;
+	
+	public int deleteTicket(List<Integer> ticketIdList) throws OMTSException;
 	
 }

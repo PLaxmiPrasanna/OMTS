@@ -64,4 +64,11 @@ public interface IBookingQueryConstants {
 	
 	String GET_TICKET="select noOfSeats,ticketStatus,screenId,theatreId,showId,movieId from ticket where ticketId=?";
 
+	String DELETE_SEAT_BY_STATUS = "delete from seat where seatStatus = ?";
+	
+	String GET_TICKET_BY_STATUS = "select ticketId from ticket where ticketStatus = ?";
+	
+	String DELETE_TICKET_IN_USER = "delete from userticket where ticketId = ?";
+	
+	String DELETE_TICKET_BY_ID = "delete from ticket where ticketId = ?";
 }
